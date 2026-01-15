@@ -1,4 +1,4 @@
-import { Shield, DollarSign, Settings, BarChart3, Headphones } from "lucide-react";
+import { Shield, Euro, Settings, BarChart3, Headphones } from "lucide-react";
 
 const trustPoints = [
   {
@@ -7,7 +7,7 @@ const trustPoints = [
     description: "Expertise in AV & UC",
   },
   {
-    icon: DollarSign,
+    icon: Euro,
     title: "Transparente Kosten",
     description: "Keine versteckten Gebühren",
   },
