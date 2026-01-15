@@ -13,8 +13,8 @@ const partners = [
   { name: "Purelink", logo: "/assets/partners/purelink.png", url: "https://www.purelink.de", hasLogo: true },
   { name: "Iiyama", logo: "/assets/partners/iiyama.png", url: "https://www.iiyama.com", hasLogo: true },
   { name: "Samsung", logo: "/assets/partners/samsung.png", url: "https://www.samsung.com", hasLogo: true },
-  { name: "AVer", logo: null, url: "https://www.aver.com", hasLogo: false },
-  { name: "Huddly", logo: null, url: "https://www.huddly.com", hasLogo: false },
+  { name: "AVer", logo: "/assets/partners/aver.jpg", url: "https://www.aver.com", hasLogo: true },
+  { name: "Huddly", logo: "/assets/partners/huddly.png", url: "https://www.huddly.com", hasLogo: true },
 ];
 
 export function PartnersSection() {
