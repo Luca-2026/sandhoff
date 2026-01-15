@@ -4,8 +4,8 @@ import { Award } from "lucide-react";
 const partners = [
   { name: "Crestron", logo: "/assets/partners/crestron.svg", url: "https://www.crestron.com", hasLogo: true },
   { name: "Q-Sys", logo: "/assets/partners/qsys.jpg", url: "https://www.qsys.com", hasLogo: true },
-  { name: "Shure", logo: "/assets/partners/shure.webp", url: "https://www.shure.com", hasLogo: true },
-  { name: "Sennheiser", logo: "/assets/partners/sennheiser.png", url: "https://www.sennheiser.com", hasLogo: true },
+  { name: "Shure", logo: "/assets/partners/shure.png", url: "https://www.shure.com", hasLogo: true },
+  { name: "Sennheiser", logo: "/assets/partners/sennheiser.png", url: "https://www.sennheiser.com", hasLogo: true, invert: true },
   { name: "Nureva", logo: "/assets/partners/nureva.png", url: "https://www.nureva.com", hasLogo: true },
   { name: "Barco", logo: "/assets/partners/barco.png", url: "https://www.barco.com", hasLogo: true },
   { name: "Yealink", logo: "/assets/partners/yealink.png", url: "https://www.yealink.com", hasLogo: true },
@@ -57,7 +57,7 @@ export function PartnersSection() {
                     loading="lazy"
                     decoding="async"
                     className={`h-full w-full object-contain transition-transform duration-300 group-hover:scale-[1.02] ${
-                      partner.name === "Huddly" ? "invert" : ""
+                      partner.name === "Huddly" || partner.invert ? "invert" : ""
                     }`}
                   />
                 </div>
