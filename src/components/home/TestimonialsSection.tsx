@@ -1,5 +1,6 @@
 import { Star, Quote } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const testimonials = [
   {
@@ -26,10 +27,19 @@ const testimonials = [
 ];
 
 export const TestimonialsSection = () => {
+  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
+  const { ref: cardsRef, isVisible: cardsVisible } = useScrollAnimation();
+  const { ref: trustRef, isVisible: trustVisible } = useScrollAnimation();
+
   return (
     <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div 
+          ref={headerRef}
+          className={`text-center mb-12 scroll-hidden-blur ${
+            headerVisible ? "scroll-visible-blur" : ""
+          }`}
+        >
           <span className="inline-block px-4 py-1.5 mb-4 text-sm font-medium bg-primary/10 text-primary rounded-full">
             Kundenstimmen
           </span>
@@ -41,11 +51,14 @@ export const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index} 
-              className="bg-card border-border hover:shadow-lg transition-shadow duration-300 relative overflow-hidden"
+              className={`bg-card border-border hover:shadow-lg transition-shadow duration-300 relative overflow-hidden scroll-hidden-right ${
+                cardsVisible ? "scroll-visible-x" : ""
+              }`}
+              style={{ transitionDelay: `${index * 0.15}s` }}
             >
               <CardContent className="p-6">
                 <Quote className="absolute top-4 right-4 h-8 w-8 text-primary/10" />
@@ -83,7 +96,12 @@ export const TestimonialsSection = () => {
         </div>
 
         {/* Trust Indicator */}
-        <div className="mt-12 text-center">
+        <div 
+          ref={trustRef}
+          className={`mt-12 text-center scroll-hidden-scale ${
+            trustVisible ? "scroll-visible-scale" : ""
+          }`}
+        >
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-card rounded-full border border-border">
             <div className="flex gap-0.5">
               {[...Array(5)].map((_, i) => (

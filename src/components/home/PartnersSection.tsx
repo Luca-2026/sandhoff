@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Award } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const partners = [
   { name: "Crestron", logo: "/assets/partners/crestron.svg", url: "https://www.crestron.com", hasLogo: true },
@@ -18,11 +19,20 @@ const partners = [
 ];
 
 export function PartnersSection() {
+  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
+  const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation();
+  const { ref: noteRef, isVisible: noteVisible } = useScrollAnimation();
+
   return (
     <section className="py-20 lg:py-28 bg-card">
       <div className="section-container">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12">
+        <div 
+          ref={headerRef}
+          className={`text-center max-w-3xl mx-auto mb-12 scroll-hidden-blur ${
+            headerVisible ? "scroll-visible-blur" : ""
+          }`}
+        >
           <Badge variant="outline" className="mb-6">
             <Award className="h-3 w-3 mr-1" />
             Zertifizierter Partner
@@ -38,15 +48,17 @@ export function PartnersSection() {
         </div>
 
         {/* Partners Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 lg:gap-6">
+        <div ref={gridRef} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 lg:gap-6">
           {partners.map((partner, index) => (
             <a
               key={partner.name}
               href={partner.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative bg-background rounded-xl border border-border p-4 lg:p-6 flex items-center justify-center min-h-[88px] lg:min-h-[110px] card-hover animate-fade-in-up"
-              style={{ animationDelay: `${index * 0.05}s` }}
+              className={`group relative bg-background rounded-xl border border-border p-4 lg:p-6 flex items-center justify-center min-h-[88px] lg:min-h-[110px] card-hover scroll-hidden-scale ${
+                gridVisible ? "scroll-visible-scale" : ""
+              }`}
+              style={{ transitionDelay: `${index * 0.05}s` }}
               aria-label={`${partner.name} Website öffnen`}
             >
               {partner.hasLogo && partner.logo ? (
@@ -71,7 +83,12 @@ export function PartnersSection() {
         </div>
 
         {/* Certification Note */}
-        <div className="mt-12 text-center">
+        <div 
+          ref={noteRef}
+          className={`mt-12 text-center scroll-hidden ${
+            noteVisible ? "scroll-visible" : ""
+          }`}
+        >
           <p className="text-sm text-muted-foreground">
             <Award className="h-4 w-4 inline-block mr-1 text-primary" />
             Zertifiziert und autorisierter Partner für alle aufgeführten Hersteller

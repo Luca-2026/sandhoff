@@ -117,6 +117,7 @@
 }
 
 @layer utilities {
+  /* Base animation states */
   .animate-fade-in {
     animation: fade-in 0.5s ease-out forwards;
   }
@@ -127,6 +128,65 @@
 
   .animate-slide-in-right {
     animation: slide-in-right 0.4s ease-out forwards;
+  }
+
+  /* Scroll-triggered animation classes */
+  .scroll-hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .scroll-hidden-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-hidden-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-visible-x {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scroll-hidden-scale {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-visible-scale {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .scroll-hidden-blur {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(20px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), 
+                filter 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .scroll-visible-blur {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
   }
 
   @keyframes fade-in {

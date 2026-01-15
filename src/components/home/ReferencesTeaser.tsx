@@ -3,6 +3,7 @@ import { ArrowRight, Building2, Users, Monitor } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const references = [
   {
@@ -35,11 +36,20 @@ const references = [
 ];
 
 export function ReferencesTeaser() {
+  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
+  const { ref: cardsRef, isVisible: cardsVisible } = useScrollAnimation();
+  const { ref: ctaRef, isVisible: ctaVisible } = useScrollAnimation();
+
   return (
     <section className="py-20 lg:py-28">
       <div className="section-container">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div 
+          ref={headerRef}
+          className={`text-center max-w-3xl mx-auto mb-16 scroll-hidden-blur ${
+            headerVisible ? "scroll-visible-blur" : ""
+          }`}
+        >
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
             Ausgewählte Referenzen
           </h2>
@@ -49,7 +59,7 @@ export function ReferencesTeaser() {
         </div>
 
         {/* References Grid */}
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div ref={cardsRef} className="grid md:grid-cols-3 gap-6 lg:gap-8">
           {references.map((ref, index) => (
             <Link
               key={ref.id}
@@ -57,8 +67,10 @@ export function ReferencesTeaser() {
               className="block"
             >
               <Card
-                className="group bg-card border-border card-hover animate-fade-in-up overflow-hidden h-full cursor-pointer"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className={`group bg-card border-border card-hover overflow-hidden h-full cursor-pointer scroll-hidden-left ${
+                  cardsVisible ? "scroll-visible-x" : ""
+                }`}
+                style={{ transitionDelay: `${index * 0.15}s` }}
               >
                 {/* Image */}
                 <div className="aspect-video bg-secondary flex items-center justify-center relative overflow-hidden">
@@ -103,7 +115,12 @@ export function ReferencesTeaser() {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
+        <div 
+          ref={ctaRef}
+          className={`text-center mt-12 scroll-hidden-scale ${
+            ctaVisible ? "scroll-visible-scale" : ""
+          }`}
+        >
           <Button asChild size="lg">
             <Link to="/projekte">
               Alle Projekte ansehen
