@@ -32,8 +32,8 @@ const solutions = [
       "Kabellose Präsentation (Barco ClickShare, etc.)",
       "Raumakustik-Optimierung"
     ],
-    useCases: ["Huddle Rooms (2-4 Personen)", "Mittlere Konferenzräume (6-12 Personen)", "Boardrooms & Vorstandszimmer", "Schulungsräume"],
-    image: "/assets/projects/alunorf/alunorf-control.jpg"
+    useCases: ["Huddle Rooms", "Mittlere Besprechungsräume", "Boardrooms", "Projektbüros"],
+    image: "/assets/solutions/conference-room.jpg"
   },
   {
     id: "kollaboration",
@@ -49,8 +49,8 @@ const solutions = [
       "Flexible Möblierung mit Medientechnik",
       "Einfache Spontan-Meetings ohne Buchung"
     ],
-    useCases: ["Kreativräume", "Scrum-Räume", "Open Space Bereiche", "Innovation Labs"],
-    image: "/assets/projects/alunorf/alunorf-dual-screen.jpg"
+    useCases: ["Design Thinking Labs", "Scrum-Räume", "Brainstorming-Zonen", "Co-Working Spaces"],
+    image: "/assets/solutions/collaboration-space.jpg"
   },
   {
     id: "auditorium",
@@ -66,8 +66,8 @@ const solutions = [
       "Zentralisierte Mediensteuerung",
       "Barrierefreie Lösungen (Induktionsschleifen)"
     ],
-    useCases: ["Town-Hall-Meetings", "Hauptversammlungen", "Konferenzen & Seminare", "Schulungsauditorien"],
-    image: "/assets/projects/pfeifer-langen/pl-meeting-room.jpg"
+    useCases: ["Hauptversammlungen", "Produktpräsentationen", "Mitarbeiter-Events", "Kongresse"],
+    image: "/assets/solutions/auditorium.jpg"
   },
   {
     id: "empfang",
@@ -83,8 +83,8 @@ const solutions = [
       "Digitale Schwarze Bretter",
       "Corporate-Design-konforme Gestaltung"
     ],
-    useCases: ["Empfangsbereiche", "Foyers", "Produktionshallen", "Kantinen"],
-    image: "/assets/projects/alunorf/alunorf-display.jpg"
+    useCases: ["Empfangslobbys", "Wartebereiche", "Cafeterien", "Showrooms"],
+    image: "/assets/solutions/reception.jpg"
   },
   {
     id: "bildung",
@@ -100,8 +100,8 @@ const solutions = [
       "Hybride Schulungskonzepte",
       "Einfache Bedienung ohne IT-Kenntnisse"
     ],
-    useCases: ["Schulungsräume", "Seminarräume", "eLearning-Studios", "Ausbildungswerkstätten"],
-    image: "/assets/projects/gea-farm/gea-room.jpg"
+    useCases: ["Akademien", "Weiterbildungszentren", "Hörsäle", "Werkstattschulungen"],
+    image: "/assets/solutions/education.jpg"
   },
   {
     id: "industrie",
@@ -117,8 +117,8 @@ const solutions = [
       "Videoüberwachung & Monitoring",
       "24/7-Betrieb mit Fernwartung"
     ],
-    useCases: ["Produktionshallen", "Leitstände", "Krisenstäbe", "Werkstätten"],
-    image: "/assets/projects/gea-farm/gea-installation.jpg"
+    useCases: ["Fertigungslinien", "Kontrollräume", "Logistikzentren", "Qualitätslabore"],
+    image: "/assets/solutions/industry.jpg"
   },
 ];
 
@@ -150,7 +150,7 @@ const Loesungen = () => {
             {solutions.map((solution, index) => (
               <Card
                 key={solution.id}
-                className="group bg-card border-border overflow-hidden card-hover animate-fade-in-up"
+                className="group bg-card border-border overflow-hidden card-hover animate-fade-in-up flex flex-col h-full"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Image */}
@@ -162,14 +162,11 @@ const Loesungen = () => {
                   />
                 </div>
                 
-                <CardHeader>
+                <CardHeader className="flex-grow-0">
                   <div className="flex items-center gap-3 mb-2">
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                       <solution.icon className="h-5 w-5 text-primary" />
                     </div>
-                    <Badge variant="secondary" className="text-xs">
-                      {solution.useCases.length} Anwendungsfälle
-                    </Badge>
                   </div>
                   <CardTitle className="text-xl">{solution.title}</CardTitle>
                   <CardDescription className="text-primary font-medium">
@@ -177,11 +174,21 @@ const Loesungen = () => {
                   </CardDescription>
                 </CardHeader>
                 
-                <CardContent>
-                  <p className="text-sm text-muted-foreground mb-4">
+                <CardContent className="flex flex-col flex-grow">
+                  <p className="text-sm text-muted-foreground mb-4 flex-grow">
                     {solution.description}
                   </p>
-                  <Button asChild variant="outline" className="w-full">
+                  
+                  {/* Use Cases as Tags */}
+                  <div className="flex flex-wrap gap-1.5 mb-4">
+                    {solution.useCases.map((useCase) => (
+                      <Badge key={useCase} variant="secondary" className="text-xs">
+                        {useCase}
+                      </Badge>
+                    ))}
+                  </div>
+                  
+                  <Button asChild variant="outline" className="w-full mt-auto">
                     <a href={`#${solution.id}-detail`}>
                       Details ansehen
                       <ArrowRight className="ml-2 h-4 w-4" />
