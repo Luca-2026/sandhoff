@@ -7,9 +7,11 @@ import { cn } from "@/lib/utils";
 const navigation = [
   { name: "Startseite", href: "/" },
   { name: "Leistungen", href: "/leistungen" },
+  { name: "Lösungen", href: "/loesungen" },
+  { name: "Technologien", href: "/technologien" },
+  { name: "Finanzierung", href: "/finanzierung" },
   { name: "Projekte", href: "/projekte" },
   { name: "Über uns", href: "/ueber-uns" },
-  { name: "Kontakt", href: "/kontakt" },
 ];
 
 export function Header() {
