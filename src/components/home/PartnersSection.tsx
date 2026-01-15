@@ -2,18 +2,19 @@ import { Badge } from "@/components/ui/badge";
 import { Award } from "lucide-react";
 
 const partners = [
-  { name: "Crestron", logo: "/assets/partners/crestron.png" },
-  { name: "Q-Sys", logo: "/assets/partners/qsys.png" },
-  { name: "Yealink", logo: "/assets/partners/yealink.png" },
-  { name: "Shure", logo: "/assets/partners/shure.png" },
-  { name: "Sennheiser", logo: "/assets/partners/sennheiser.png" },
-  { name: "AVer", logo: "/assets/partners/aver.png" },
-  { name: "Huddly", logo: "/assets/partners/huddly.png" },
-  { name: "Nureva", logo: "/assets/partners/nureva.png" },
-  { name: "Lightware", logo: "/assets/partners/lightware.png" },
-  { name: "Purelink", logo: "/assets/partners/purelink.png" },
-  { name: "Iiyama", logo: "/assets/partners/iiyama.png" },
-  { name: "Samsung", logo: "/assets/partners/samsung.png" },
+  { name: "Shure", logo: "/assets/partners/shure.png", hasLogo: true },
+  { name: "Sennheiser", logo: "/assets/partners/sennheiser.svg", hasLogo: true },
+  { name: "Nureva", logo: "/assets/partners/nureva.png", hasLogo: true },
+  { name: "Barco", logo: "/assets/partners/barco.png", hasLogo: true },
+  { name: "Yealink", logo: "/assets/partners/yealink.png", hasLogo: true },
+  { name: "Lightware", logo: "/assets/partners/lightware.jpg", hasLogo: true },
+  { name: "Purelink", logo: "/assets/partners/purelink.png", hasLogo: true },
+  { name: "Iiyama", logo: "/assets/partners/iiyama.png", hasLogo: true },
+  { name: "Samsung", logo: "/assets/partners/samsung.png", hasLogo: true },
+  { name: "Crestron", logo: null, hasLogo: false },
+  { name: "Q-Sys", logo: null, hasLogo: false },
+  { name: "AVer", logo: null, hasLogo: false },
+  { name: "Huddly", logo: null, hasLogo: false },
 ];
 
 export function PartnersSection() {
@@ -37,19 +38,24 @@ export function PartnersSection() {
         </div>
 
         {/* Partners Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 lg:gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 lg:gap-6">
           {partners.map((partner, index) => (
             <div
               key={partner.name}
-              className="group relative bg-background rounded-xl border border-border p-6 flex items-center justify-center aspect-[3/2] card-hover animate-fade-in-up"
+              className="group relative bg-background rounded-xl border border-border p-4 lg:p-6 flex items-center justify-center min-h-[80px] lg:min-h-[100px] card-hover animate-fade-in-up"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
-              {/* Placeholder with name - replace with actual logos */}
-              <div className="flex flex-col items-center justify-center text-center">
+              {partner.hasLogo && partner.logo ? (
+                <img 
+                  src={partner.logo} 
+                  alt={partner.name}
+                  className="max-h-10 lg:max-h-12 w-auto max-w-full object-contain filter brightness-0 invert opacity-70 group-hover:opacity-100 transition-opacity"
+                />
+              ) : (
                 <span className="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors">
                   {partner.name}
                 </span>
-              </div>
+              )}
             </div>
           ))}
         </div>
