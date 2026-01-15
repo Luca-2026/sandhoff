@@ -3,82 +3,82 @@
 @tailwind utilities;
 
 /* Sandhoff | IT- & Mediensysteme - Design System
-   Dark Professional Theme with Cyan Accents
+   Dark Professional Theme with Orange Corporate Color
    All colors in HSL format */
 
 @layer base {
   :root {
-    /* Dark Theme - Base Colors */
-    --background: 222 47% 6%;
-    --foreground: 210 40% 98%;
+    /* Dark Theme - Base Colors (Pure Black like Logo) */
+    --background: 0 0% 5%;
+    --foreground: 0 0% 98%;
 
-    --card: 222 47% 8%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 222 47% 8%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
 
-    /* Primary - Cyan Accent */
-    --primary: 187 85% 43%;
-    --primary-foreground: 222 47% 6%;
+    /* Primary - Sandhoff Orange */
+    --primary: 27 91% 55%;
+    --primary-foreground: 0 0% 2%;
 
-    /* Secondary - Slate */
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 210 40% 98%;
+    /* Secondary - Dark Gray */
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 65%;
 
-    /* Accent - Lighter Cyan */
-    --accent: 187 85% 53%;
-    --accent-foreground: 222 47% 6%;
+    /* Accent - Lighter Orange */
+    --accent: 27 91% 60%;
+    --accent-foreground: 0 0% 2%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 187 85% 43%;
+    --border: 0 0% 18%;
+    --input: 0 0% 14%;
+    --ring: 27 91% 55%;
 
     --radius: 0.75rem;
 
     /* Sidebar */
-    --sidebar-background: 222 47% 5%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 187 85% 43%;
-    --sidebar-primary-foreground: 222 47% 6%;
-    --sidebar-accent: 217 33% 17%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217 33% 17%;
-    --sidebar-ring: 187 85% 43%;
+    --sidebar-background: 0 0% 4%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 27 91% 55%;
+    --sidebar-primary-foreground: 0 0% 2%;
+    --sidebar-accent: 0 0% 14%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 18%;
+    --sidebar-ring: 27 91% 55%;
 
     /* Custom Tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(187 85% 43%), hsl(187 85% 53%));
-    --shadow-glow: 0 0 40px -10px hsl(187 85% 43% / 0.3);
-    --shadow-card: 0 4px 20px -4px hsl(222 47% 3% / 0.5);
+    --gradient-primary: linear-gradient(135deg, hsl(27 91% 50%), hsl(27 91% 60%));
+    --shadow-glow: 0 0 40px -10px hsl(27 91% 55% / 0.4);
+    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.5);
   }
 
   /* Light mode override - keep dark for this project */
   .light {
-    --background: 222 47% 6%;
-    --foreground: 210 40% 98%;
-    --card: 222 47% 8%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222 47% 8%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 187 85% 43%;
-    --primary-foreground: 222 47% 6%;
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 187 85% 53%;
-    --accent-foreground: 222 47% 6%;
+    --background: 0 0% 5%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 27 91% 55%;
+    --primary-foreground: 0 0% 2%;
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 27 91% 60%;
+    --accent-foreground: 0 0% 2%;
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 187 85% 43%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 18%;
+    --input: 0 0% 14%;
+    --ring: 27 91% 55%;
   }
 }
 
