@@ -20,13 +20,12 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <nav className="section-container flex items-center justify-between h-16 lg:h-20">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
-          <div className="flex flex-col">
-            <span className="text-xl font-bold text-foreground">Sandhoff</span>
-            <span className="text-[10px] text-muted-foreground tracking-wider uppercase">
-              IT- & Mediensysteme
-            </span>
-          </div>
+        <Link to="/" className="flex items-center">
+          <img 
+            src="/assets/sandhoff-logo.jpg" 
+            alt="Sandhoff IT- & Mediensysteme" 
+            className="h-10 lg:h-12 w-auto"
+          />
         </Link>
 
         {/* Desktop Navigation */}
