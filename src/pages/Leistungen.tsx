@@ -120,17 +120,19 @@ const Leistungen = () => {
                 {service.deliverables.map((item, index) => (
                   <Card
                     key={item.title}
-                    className="bg-card border-border card-hover animate-fade-in-up"
+                    className="bg-card border-border card-hover animate-fade-in-up overflow-hidden"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <CardHeader className="pb-2">
-                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-2">
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-2 flex-shrink-0">
                         <item.icon className="h-5 w-5 text-primary" />
                       </div>
-                      <CardTitle className="text-base">{item.title}</CardTitle>
+                      <CardTitle className="text-base break-words hyphens-auto leading-tight">
+                        {item.title}
+                      </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <CardDescription className="text-sm">
+                      <CardDescription className="text-sm break-words">
                         {item.description}
                       </CardDescription>
                     </CardContent>
