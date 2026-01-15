@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Lightbulb, FileText, Monitor, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const services = [
   {
@@ -28,11 +29,20 @@ const services = [
 ];
 
 export function ServicesOverview() {
+  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
+  const { ref: cardsRef, isVisible: cardsVisible } = useScrollAnimation();
+  const { ref: ctaRef, isVisible: ctaVisible } = useScrollAnimation();
+
   return (
     <section className="py-20 lg:py-28">
       <div className="section-container">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div 
+          ref={headerRef}
+          className={`text-center max-w-3xl mx-auto mb-16 scroll-hidden-blur ${
+            headerVisible ? "scroll-visible-blur" : ""
+          }`}
+        >
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
             Meine Leistungen
           </h2>
@@ -43,12 +53,14 @@ export function ServicesOverview() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div ref={cardsRef} className="grid md:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service, index) => (
             <Card
               key={service.title}
-              className="group bg-card border-border card-hover animate-fade-in-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className={`group bg-card border-border card-hover scroll-hidden ${
+                cardsVisible ? "scroll-visible" : ""
+              }`}
+              style={{ transitionDelay: `${index * 0.15}s` }}
             >
               <CardHeader>
                 <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
@@ -74,7 +86,12 @@ export function ServicesOverview() {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-12">
+        <div 
+          ref={ctaRef}
+          className={`text-center mt-12 scroll-hidden-scale ${
+            ctaVisible ? "scroll-visible-scale" : ""
+          }`}
+        >
           <Button asChild variant="outline" size="lg">
             <Link to="/leistungen">
               Alle Leistungen im Detail

@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Upload, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export function CTASection() {
+  const { ref, isVisible } = useScrollAnimation();
+
   return (
     <section className="py-20 lg:py-28 relative overflow-hidden">
       {/* Background */}
@@ -10,7 +13,12 @@ export function CTASection() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent" />
 
       <div className="section-container relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+        <div 
+          ref={ref}
+          className={`max-w-4xl mx-auto text-center scroll-hidden-blur ${
+            isVisible ? "scroll-visible-blur" : ""
+          }`}
+        >
           {/* Headline */}
           <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-6">
             Bereit für Ihre moderne{" "}

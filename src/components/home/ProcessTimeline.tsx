@@ -1,4 +1,5 @@
 import { MessageSquare, Search, FileCheck, Wrench, HeartHandshake } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const steps = [
   {
@@ -34,11 +35,19 @@ const steps = [
 ];
 
 export function ProcessTimeline() {
+  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
+  const { ref: timelineRef, isVisible: timelineVisible } = useScrollAnimation();
+
   return (
     <section className="py-20 lg:py-28 bg-card">
       <div className="section-container">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div 
+          ref={headerRef}
+          className={`text-center max-w-3xl mx-auto mb-16 scroll-hidden-blur ${
+            headerVisible ? "scroll-visible-blur" : ""
+          }`}
+        >
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
             So arbeiten wir zusammen
           </h2>
@@ -49,7 +58,7 @@ export function ProcessTimeline() {
         </div>
 
         {/* Timeline */}
-        <div className="relative">
+        <div className="relative" ref={timelineRef}>
           {/* Connection Line - Desktop */}
           <div className="hidden lg:block absolute top-8 left-[10%] right-[10%] h-0.5 bg-border" />
           
@@ -57,8 +66,10 @@ export function ProcessTimeline() {
             {steps.map((step, index) => (
               <div
                 key={step.number}
-                className="relative flex flex-col items-center text-center animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className={`relative flex flex-col items-center text-center scroll-hidden ${
+                  timelineVisible ? "scroll-visible" : ""
+                }`}
+                style={{ transitionDelay: `${index * 0.12}s` }}
               >
                 {/* Icon Circle with Number */}
                 <div className="relative z-10 w-16 h-16 rounded-full bg-primary flex items-center justify-center mb-6">

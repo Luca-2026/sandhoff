@@ -1,4 +1,5 @@
 import { Shield, Euro, Settings, BarChart3, Headphones } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const trustPoints = [
   {
@@ -29,15 +30,19 @@ const trustPoints = [
 ];
 
 export function TrustBar() {
+  const { ref, isVisible } = useScrollAnimation();
+
   return (
     <section className="py-12 bg-card border-y border-border">
-      <div className="section-container">
+      <div className="section-container" ref={ref}>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-4">
           {trustPoints.map((point, index) => (
             <div
               key={point.title}
-              className="flex flex-col items-center text-center p-4 animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className={`flex flex-col items-center text-center p-4 scroll-hidden ${
+                isVisible ? "scroll-visible" : ""
+              }`}
+              style={{ transitionDelay: `${index * 0.1}s` }}
             >
               <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
                 <point.icon className="h-6 w-6 text-primary" />
