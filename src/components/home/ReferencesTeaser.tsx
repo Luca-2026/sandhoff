@@ -9,9 +9,9 @@ const references = [
     id: "aluminium-norf",
     company: "Aluminium Norf GmbH",
     category: "Boardroom & Schulung",
-    description: "Modernisierung des Vorstandsbereichs und Aufbau eines vollausgestatteten Schulungsraums mit hybrider Meeting-Fähigkeit.",
+    description: "Ausbau von zwei Räumen zu modernen Videokonferenz- und Schulungsumgebungen mit Shure, Nureva und AVer Tracking-Kameras.",
     icon: Building2,
-    tags: ["Cisco", "MS Teams", "LED-Display"],
+    tags: ["Shure", "Nureva", "AVer Tracking"],
     image: "/assets/projects/alunorf/alunorf-main.jpg",
   },
   {
