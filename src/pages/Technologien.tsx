@@ -198,17 +198,17 @@ const Technologien = () => {
             {technologies.map((tech, index) => (
               <Card
                 key={tech.id}
-                className="group bg-card border-border card-hover animate-fade-in-up"
+                className="group bg-card border-border card-hover animate-fade-in-up flex flex-col h-full"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <CardHeader>
+                <CardHeader className="flex-1">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                     <tech.icon className="h-6 w-6 text-primary" />
                   </div>
                   <CardTitle>{tech.title}</CardTitle>
                   <CardDescription>{tech.description}</CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="pt-0 mt-auto">
                   <div className="flex flex-wrap gap-2 mb-4">
                     {tech.partners.map((partner) => (
                       <Badge key={partner} variant="secondary" className="text-xs">
