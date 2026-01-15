@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, MapPin, Phone, Facebook, Instagram, Linkedin } from "lucide-react";
+import { Mail, MapPin, Linkedin } from "lucide-react";
 
 const footerLinks = {
   navigation: [
@@ -102,29 +102,11 @@ export function Footer() {
             {/* Social Links */}
             <div className="flex items-center gap-4 mt-6">
               <a
-                href="https://facebook.com"
+                href="https://www.linkedin.com/in/luca-sandhoff-5a332017a"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors"
-                aria-label="LinkedIn"
+                aria-label="LinkedIn Profil von Luca Sandhoff"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
