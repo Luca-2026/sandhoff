@@ -2,6 +2,8 @@ import { Badge } from "@/components/ui/badge";
 import { Award } from "lucide-react";
 
 const partners = [
+  { name: "Crestron", logo: "/assets/partners/crestron.svg", url: "https://www.crestron.com", hasLogo: true },
+  { name: "Q-Sys", logo: "/assets/partners/qsys.jpg", url: "https://www.qsys.com", hasLogo: true },
   { name: "Shure", logo: "/assets/partners/shure.png", url: "https://www.shure.com", hasLogo: true },
   { name: "Sennheiser", logo: "/assets/partners/sennheiser.svg", url: "https://www.sennheiser.com", hasLogo: true },
   { name: "Nureva", logo: "/assets/partners/nureva.png", url: "https://www.nureva.com", hasLogo: true },
@@ -11,8 +13,6 @@ const partners = [
   { name: "Purelink", logo: "/assets/partners/purelink.png", url: "https://www.purelink.de", hasLogo: true },
   { name: "Iiyama", logo: "/assets/partners/iiyama.png", url: "https://www.iiyama.com", hasLogo: true },
   { name: "Samsung", logo: "/assets/partners/samsung.png", url: "https://www.samsung.com", hasLogo: true },
-  { name: "Crestron", logo: null, url: "https://www.crestron.com", hasLogo: false },
-  { name: "Q-Sys", logo: null, url: "https://www.qsys.com", hasLogo: false },
   { name: "AVer", logo: null, url: "https://www.aver.com", hasLogo: false },
   { name: "Huddly", logo: null, url: "https://www.huddly.com", hasLogo: false },
 ];
