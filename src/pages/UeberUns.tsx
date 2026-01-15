@@ -35,10 +35,12 @@ const values = [
 ];
 
 const timeline = [
-  { year: "2016", text: "Einstieg in die AV/UC-Branche bei einem führenden Systemintegrator" },
-  { year: "2019", text: "Spezialisierung auf Fachplanung und Beratung für Unternehmenskunden" },
-  { year: "2021", text: "Erweiterung des Portfolios um Managed Services und IT-Integration" },
-  { year: "2023", text: "Gründung von Sandhoff | IT- & Mediensysteme" },
+  { year: "2016", text: "Einstieg als Veranstaltungstechniker und -kaufmann – Planung und Umsetzung technischer Lösungen für Messe und Retail" },
+  { year: "2019", text: "Fokus auf Systemintegration und Fachplanung von AV/UC-Komponenten" },
+  { year: "2022", text: "Implementierung von Managed Service Lösungen und Umsetzung EU-weiter Medientechnik-Ausschreibungen" },
+  { year: "04/2024", text: "Leitende Position als Verantwortlicher für Medientechnik in einem Konzern" },
+  { year: "05/2024", text: "ITIL 4 IT Service Management Zertifizierung" },
+  { year: "Laufend", text: "Herstellerzertifizierungen: Crestron, Q-Sys, Shure, Barco, Microsoft, Yealink" },
 ];
 
 const UeberUns = () => {
