@@ -32,7 +32,15 @@ const projects = [
     location: "Neuss",
     year: "2023",
     icon: Building2,
-    heroImage: null, // Platzhalter
+    heroImage: "/assets/projects/alunorf/alunorf-main.jpg",
+    galleryImages: [
+      "/assets/projects/alunorf/alunorf-display.jpg",
+      "/assets/projects/alunorf/alunorf-control.jpg",
+      "/assets/projects/alunorf/alunorf-logo.jpg",
+      "/assets/projects/alunorf/alunorf-speaker.jpg",
+      "/assets/projects/alunorf/alunorf-dual-screen.jpg",
+      "/assets/projects/alunorf/alunorf-ceiling.jpg",
+    ],
     shortDescription: "Modernisierung des Vorstandsbereichs und Aufbau eines vollausgestatteten Schulungsraums.",
     challenge: "Der bestehende Vorstandsbereich entsprach nicht mehr den Anforderungen an moderne hybride Meetings. Zusätzlich fehlte ein professioneller Schulungsraum für interne Weiterbildungen.",
     solution: "Komplettmodernisierung des Boardrooms mit Cisco-Videokonferenzsystem, Microsoft Teams-Integration und akustischer Optimierung. Parallel dazu Aufbau eines Schulungsraums mit interaktivem Display und Aufnahmemöglichkeit.",
@@ -52,7 +60,8 @@ const projects = [
     location: "Köln",
     year: "2023",
     icon: Monitor,
-    heroImage: null, // Platzhalter
+    heroImage: null,
+    galleryImages: [],
     shortDescription: "Standardisierte Ausstattung von über 20 Konferenzräumen inklusive einer 136\" LED-Wall.",
     challenge: "Die bestehende Konferenzraumausstattung war heterogen und veraltet. Nutzer beklagten eine uneinheitliche Bedienung und häufige technische Probleme bei Video-Meetings.",
     solution: "Entwicklung eines einheitlichen Raumstandards für alle Raumgrößen. Rollout über 20 Räume mit zentraler Managementplattform. Highlight: 136\" LED-Wall im Managementbereich für beeindruckende Präsentationen.",
@@ -72,7 +81,8 @@ const projects = [
     location: "Bönen",
     year: "2022",
     icon: Users,
-    heroImage: null, // Platzhalter
+    heroImage: null,
+    galleryImages: [],
     shortDescription: "Konzeption und Umsetzung eines modernen Managementraums mit nahtloser UC-Integration.",
     challenge: "Das Management benötigte einen repräsentativen Raum für Präsentationen, Video-Meetings und strategische Workshops – mit höchsten Ansprüchen an Technik und Design.",
     solution: "Entwicklung eines Raumkonzepts mit nahtloser UC-Integration, hochwertiger Displaytechnik und professioneller Mediensteuerung. Besonderer Fokus auf Akustik und Beleuchtungsdesign.",
@@ -144,17 +154,27 @@ const Projekte = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="grid lg:grid-cols-2">
-                  {/* Image Placeholder */}
-                  <div className="aspect-video lg:aspect-auto bg-secondary flex items-center justify-center relative">
-                    <project.icon className="h-24 w-24 text-muted-foreground/20" />
+                  {/* Project Image */}
+                  <div className="aspect-video lg:aspect-auto bg-secondary flex items-center justify-center relative overflow-hidden min-h-[300px]">
+                    {project.heroImage ? (
+                      <img 
+                        src={project.heroImage} 
+                        alt={project.company}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <>
+                        <project.icon className="h-24 w-24 text-muted-foreground/20" />
+                        <p className="absolute bottom-4 left-4 right-4 text-xs text-muted-foreground text-center">
+                          Bildplatzhalter – Hier kommt ein Projektfoto
+                        </p>
+                      </>
+                    )}
                     <div className="absolute top-4 left-4">
                       <Badge className="bg-primary text-primary-foreground">
                         {project.categoryLabel}
                       </Badge>
                     </div>
-                    <p className="absolute bottom-4 left-4 right-4 text-xs text-muted-foreground text-center">
-                      Bildplatzhalter – Hier kommt ein Projektfoto
-                    </p>
                   </div>
 
                   {/* Content */}
