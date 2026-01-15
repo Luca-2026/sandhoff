@@ -4,7 +4,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://sandhoff.lovable.app/sitemap.xml
+Sitemap: https://www.sandhoff.org/sitemap.xml
 
 # Crawl-delay für höfliches Crawling
 Crawl-delay: 1
