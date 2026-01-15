@@ -1,6 +1,20 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useCountUp } from "@/hooks/useCountUp";
+
+function CountUpStat({ end, suffix, label }: { end: number; suffix: string; label: string }) {
+  const { count, ref } = useCountUp({ end, duration: 2000 });
+  
+  return (
+    <div className="text-center" ref={ref}>
+      <div className="text-3xl lg:text-4xl font-bold text-primary">
+        {count}{suffix}
+      </div>
+      <div className="text-sm text-muted-foreground mt-1">{label}</div>
+    </div>
+  );
+}
 
 export function HeroSection() {
   return (
@@ -46,20 +60,11 @@ export function HeroSection() {
             </Button>
           </div>
 
-          {/* Stats */}
+          {/* Stats with Count Up */}
           <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto mt-16 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-            <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-primary">8+</div>
-              <div className="text-sm text-muted-foreground mt-1">Jahre Erfahrung</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-primary">50+</div>
-              <div className="text-sm text-muted-foreground mt-1">Projekte</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-primary">100%</div>
-              <div className="text-sm text-muted-foreground mt-1">Herstellerneutral</div>
-            </div>
+            <CountUpStat end={8} suffix="+" label="Jahre Erfahrung" />
+            <CountUpStat end={50} suffix="+" label="Projekte" />
+            <CountUpStat end={100} suffix="%" label="Herstellerneutral" />
           </div>
         </div>
       </div>
