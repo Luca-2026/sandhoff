@@ -66,11 +66,12 @@ export function ReferencesTeaser() {
                   {ref.image ? (
                     <img 
                       src={ref.image} 
-                      alt={ref.company}
+                      alt={`${ref.company} Referenzprojekt: ${ref.category} - ${ref.description.substring(0, 60)}...`}
+                      loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   ) : (
-                    <ref.icon className="h-16 w-16 text-muted-foreground/30" />
+                    <ref.icon className="h-16 w-16 text-muted-foreground/30" aria-hidden="true" />
                   )}
                   <div className="absolute top-3 left-3 z-20">
                     <Badge variant="secondary" className="bg-background/80 backdrop-blur-sm">

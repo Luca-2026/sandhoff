@@ -1,3 +1,15 @@
+# Robots.txt für Sandhoff IT- & Mediensysteme
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://sandhoff.lovable.app/sitemap.xml
+
+# Crawl-delay für höfliches Crawling
+Crawl-delay: 1
+
+# Spezifische Bot-Regeln
 User-agent: Googlebot
 Allow: /
 
@@ -10,5 +22,15 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
+User-agent: LinkedInBot
 Allow: /
+
+# Blockiere bekannte Bad Bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /

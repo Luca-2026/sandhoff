@@ -1,20 +1,18 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
+import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
   Building2, 
   Users, 
   Monitor, 
-  Layers, 
   ArrowRight,
   MapPin,
   Calendar,
   CheckCircle,
-  ChevronLeft,
-  ChevronRight,
   X
 } from "lucide-react";
 
@@ -132,6 +130,12 @@ const Projekte = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title="Referenzen & Projektbeispiele"
+        description="Erfolgreiche AV-Projekte: Von Boardrooms über Schulungsräume bis zu Multi-Room-Rollouts. Sehen Sie unsere realisierten Videokonferenz- und Medientechnik-Lösungen."
+        keywords="AV Referenzen, Videokonferenz Projekte, Konferenzraum Beispiele, LED-Wall Installation, Medientechnik Referenzen"
+        canonical="/projekte"
+      />
       {/* Hero Section */}
       <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 to-background">
         <div className="section-container">
@@ -186,12 +190,13 @@ const Projekte = () => {
                     {project.heroImage ? (
                       <img 
                         src={project.heroImage} 
-                        alt={project.company}
+                        alt={`${project.company} Referenzprojekt: ${project.categoryLabel} in ${project.location} - ${project.shortDescription.substring(0, 80)}`}
+                        loading="lazy"
                         className="w-full h-full object-cover"
                       />
                     ) : (
                       <>
-                        <project.icon className="h-24 w-24 text-muted-foreground/20" />
+                        <project.icon className="h-24 w-24 text-muted-foreground/20" aria-hidden="true" />
                         <p className="absolute bottom-4 left-4 right-4 text-xs text-muted-foreground text-center">
                           Bildplatzhalter – Hier kommt ein Projektfoto
                         </p>

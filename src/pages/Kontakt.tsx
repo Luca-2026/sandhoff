@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Layout } from "@/components/layout/Layout";
+import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -52,6 +53,12 @@ const Kontakt = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title="Kontakt & Beratung"
+        description="Kontaktieren Sie Sandhoff IT- & Mediensysteme für Ihre Videokonferenz- und AV-Projekte. Kostenlose Erstberatung für Unternehmen."
+        keywords="AV-Beratung Kontakt, Videokonferenz Beratung, Medientechnik Anfrage"
+        canonical="/kontakt"
+      />
       {/* Hero Section */}
       <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 to-background">
         <div className="section-container">

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
+import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -165,6 +166,12 @@ const technologies = [
 const Technologien = () => {
   return (
     <Layout>
+      <SEOHead
+        title="Technologien & AV-Produkte"
+        description="Herstellerneutrale Beratung zu Videokonferenzsystemen, Displays, Audiotechnik und Mediensteuerung. Zertifiziert bei führenden AV-Herstellern."
+        keywords="Videokonferenzsystem, Microsoft Teams Rooms, Zoom Rooms, LED-Wall, Shure Mikrofon, Crestron Steuerung, AV-Technik"
+        canonical="/technologien"
+      />
       {/* Hero Section */}
       <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 to-background">
         <div className="section-container">

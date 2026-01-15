@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
+import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -11,9 +12,6 @@ import {
   Building2,
   GraduationCap,
   Factory,
-  Monitor,
-  Mic,
-  Settings,
   CheckCircle
 } from "lucide-react";
 
@@ -125,6 +123,12 @@ const solutions = [
 const Loesungen = () => {
   return (
     <Layout>
+      <SEOHead
+        title="Lösungen für Konferenzräume & AV-Technik"
+        description="Maßgeschneiderte AV-Lösungen für Konferenzräume, Auditorien, Schulungsräume und Produktionsumgebungen. Von der Planung bis zur Integration."
+        keywords="Konferenzraum Lösung, Auditorium Technik, Schulungsraum Ausstattung, Digital Signage, Hybride Meetings, LED-Wall"
+        canonical="/loesungen"
+      />
       {/* Hero Section */}
       <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 to-background">
         <div className="section-container">
@@ -157,7 +161,8 @@ const Loesungen = () => {
                 <div className="aspect-video bg-secondary overflow-hidden">
                   <img 
                     src={solution.image} 
-                    alt={solution.title}
+                    alt={`${solution.title}: ${solution.subtitle} - Professionelle AV-Lösung für ${solution.useCases.join(", ")}`}
+                    loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
