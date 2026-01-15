@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
+import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -66,6 +67,12 @@ const services = [
 const Leistungen = () => {
   return (
     <Layout>
+      <SEOHead
+        title="Leistungen: Konzeption, Planung & Betrieb"
+        description="AV-Beratung von der Konzeption über Fachplanung und Ausschreibung bis zum laufenden Betrieb. Herstellerneutral und auf Ihre Anforderungen zugeschnitten."
+        keywords="AV-Beratung, Medientechnik Planung, Ausschreibung Konferenzraum, IT-Integration, Managed Service AV"
+        canonical="/leistungen"
+      />
       {/* Hero Section */}
       <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 to-background">
         <div className="section-container">
