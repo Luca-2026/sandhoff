@@ -21,7 +21,7 @@ const references = [
     description: "Standardisierte Ausstattung von über 20 Konferenzräumen inklusive einer 136\" LED-Wall für das Management.",
     icon: Monitor,
     tags: ["20+ Räume", "LED-Wall", "Standardisierung"],
-    image: null,
+    image: "/assets/projects/pfeifer-langen/pl-main.jpg",
   },
   {
     id: "gea-farm",
