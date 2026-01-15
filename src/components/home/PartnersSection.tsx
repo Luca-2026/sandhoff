@@ -4,7 +4,7 @@ import { Award } from "lucide-react";
 const partners = [
   { name: "Crestron", logo: "/assets/partners/crestron.svg", url: "https://www.crestron.com", hasLogo: true },
   { name: "Q-Sys", logo: "/assets/partners/qsys.jpg", url: "https://www.qsys.com", hasLogo: true },
-  { name: "Shure", logo: "/assets/partners/shure.png", url: "https://www.shure.com", hasLogo: true },
+  { name: "Shure", logo: "/assets/partners/shure.svg", url: "https://www.shure.com", hasLogo: true },
   { name: "Sennheiser", logo: "/assets/partners/sennheiser.png", url: "https://www.sennheiser.com", hasLogo: true, invert: true },
   { name: "Nureva", logo: "/assets/partners/nureva.png", url: "https://www.nureva.com", hasLogo: true },
   { name: "Barco", logo: "/assets/partners/barco.png", url: "https://www.barco.com", hasLogo: true },
