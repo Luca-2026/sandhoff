@@ -45,15 +45,22 @@ export function PartnersSection() {
               href={partner.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative bg-background rounded-xl border border-border p-4 lg:p-6 flex items-center justify-center min-h-[80px] lg:min-h-[100px] card-hover animate-fade-in-up"
+              className="group relative bg-background rounded-xl border border-border p-4 lg:p-6 flex items-center justify-center min-h-[88px] lg:min-h-[110px] card-hover animate-fade-in-up"
               style={{ animationDelay: `${index * 0.05}s` }}
+              aria-label={`${partner.name} Website öffnen`}
             >
               {partner.hasLogo && partner.logo ? (
-                <img 
-                  src={partner.logo} 
-                  alt={partner.name}
-                  className="max-h-8 lg:max-h-10 w-auto max-w-[90%] object-contain opacity-80 group-hover:opacity-100 transition-opacity"
-                />
+                <div className="w-full h-12 lg:h-14 flex items-center justify-center">
+                  <img
+                    src={partner.logo}
+                    alt={`${partner.name} Logo`}
+                    loading="lazy"
+                    decoding="async"
+                    className={`h-full w-full object-contain transition-transform duration-300 group-hover:scale-[1.02] ${
+                      partner.name === "Huddly" ? "invert" : ""
+                    }`}
+                  />
+                </div>
               ) : (
                 <span className="text-sm font-medium text-muted-foreground group-hover:text-primary transition-colors">
                   {partner.name}
