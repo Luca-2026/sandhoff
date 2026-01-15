@@ -188,7 +188,7 @@ const Kontakt = () => {
                 </CardContent>
               </Card>
 
-              {/* Calendar Embed Placeholder */}
+              {/* Calendly Booking */}
               <Card className="bg-card border-border">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
@@ -200,17 +200,15 @@ const Kontakt = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="aspect-video bg-secondary rounded-lg flex items-center justify-center">
-                    <div className="text-center p-6">
-                      <Calendar className="h-12 w-12 text-muted-foreground/30 mx-auto mb-4" />
-                      <p className="text-sm text-muted-foreground mb-2">
-                        Calendly/Cal.com Embed-Platzhalter
-                      </p>
-                      <p className="text-xs text-muted-foreground">
-                        Hier wird das Buchungswidget eingebettet,<br />
-                        sobald der Buchungslink hinterlegt ist.
-                      </p>
-                    </div>
+                  <div className="aspect-[4/3] rounded-lg overflow-hidden">
+                    <iframe
+                      src="https://calendly.com/luca-sandhoff?hide_gdpr_banner=1"
+                      width="100%"
+                      height="100%"
+                      frameBorder="0"
+                      title="Termin buchen"
+                      className="min-h-[400px]"
+                    />
                   </div>
                 </CardContent>
               </Card>
