@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
@@ -11,6 +11,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import { 
   ArrowLeft,
   ArrowRight,
@@ -156,16 +157,42 @@ const Projektanfrage = () => {
   const handleSubmit = async () => {
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    try {
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: {
+          type: "project",
+          name: formData.contactName,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          roomType: roomTypes.find(r => r.id === formData.roomType)?.label || formData.roomType,
+          roomCount: formData.roomCount,
+          timeline: formData.timeline,
+          budget: formData.budget,
+          platform: platforms.find(p => p.id === formData.platform)?.label || formData.platform,
+          existingSetup: formData.existingSetup,
+          requirements: formData.requirements.map(r => requirements.find(req => req.id === r)?.label || r),
+          additionalInfo: formData.additionalInfo,
+        },
+      });
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+      if (error) throw error;
 
-    toast({
-      title: "Anfrage erfolgreich gesendet!",
-      description: "Vielen Dank! Ich melde mich innerhalb von 24 Stunden bei Ihnen.",
-    });
+      setIsSubmitted(true);
+      toast({
+        title: "Anfrage erfolgreich gesendet!",
+        description: "Vielen Dank! Ich melde mich innerhalb von 24 Stunden bei Ihnen.",
+      });
+    } catch (error) {
+      console.error("Error sending project request:", error);
+      toast({
+        title: "Fehler beim Senden",
+        description: "Bitte versuchen Sie es später erneut oder kontaktieren Sie mich direkt per E-Mail.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const progress = (currentStep / 5) * 100;
