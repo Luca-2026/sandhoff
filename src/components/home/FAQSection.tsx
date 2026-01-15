@@ -10,17 +10,17 @@ const faqs = [
   {
     question: "Was bedeutet ‚herstellerneutral'?",
     answer:
-      "Ich bin an keinen Hersteller gebunden und empfehle ausschließlich die Lösungen, die optimal zu Ihren Anforderungen und Ihrer bestehenden Infrastruktur passen. Das garantiert Ihnen objektive Beratung ohne Interessenskonflikte.",
+      "Wir sind an keinen Hersteller gebunden und empfehlen ausschließlich die Lösungen, die optimal zu Ihren Anforderungen und Ihrer bestehenden Infrastruktur passen. Das garantiert Ihnen objektive Beratung ohne Interessenskonflikte.",
   },
   {
     question: "Arbeiten Sie nur mit großen Unternehmen?",
     answer:
-      "Nein, ich betreue Projekte unterschiedlicher Größe – vom einzelnen Konferenzraum bis zum Multi-Room-Rollout mit über 20 Räumen. Entscheidend ist nicht die Unternehmensgröße, sondern die Komplexität der Anforderungen.",
+      "Nein, wir betreuen Projekte unterschiedlicher Größe – vom einzelnen Konferenzraum bis zum Multi-Room-Rollout mit über 20 Räumen. Entscheidend ist nicht die Unternehmensgröße, sondern die Komplexität der Anforderungen.",
   },
   {
     question: "Was kostet eine erste Beratung?",
     answer:
-      "Das Erstgespräch zur Bedarfsanalyse ist kostenfrei. Erst wenn wir gemeinsam entscheiden, ein Projekt zu starten, erstelle ich ein transparentes Angebot ohne versteckte Kosten.",
+      "Das Erstgespräch zur Bedarfsanalyse ist kostenfrei. Erst wenn wir gemeinsam entscheiden, ein Projekt zu starten, erstellen wir ein transparentes Angebot ohne versteckte Kosten.",
   },
   {
     question: "Wie lange dauert ein typisches Projekt?",
@@ -30,7 +30,7 @@ const faqs = [
   {
     question: "Unterstützen Sie auch bei der Beschaffung?",
     answer:
-      "Ja, ich begleite den gesamten Beschaffungsprozess: Von der Erstellung herstellerneutraler Leistungsverzeichnisse über die Bewertung der Angebote bis zur finalen Vergabeempfehlung.",
+      "Ja, wir begleiten den gesamten Beschaffungsprozess: Von der Erstellung herstellerneutraler Leistungsverzeichnisse über die Bewertung der Angebote bis zur finalen Vergabeempfehlung.",
   },
   {
     question: "Was umfasst der Managed Service?",
@@ -57,7 +57,7 @@ export function FAQSection() {
             Häufige Fragen
           </h2>
           <p className="text-lg text-muted-foreground">
-            Antworten auf die wichtigsten Fragen zu meiner Arbeitsweise und meinen Leistungen.
+            Antworten auf die wichtigsten Fragen zu unserer Arbeitsweise und unseren Leistungen.
           </p>
         </div>
 

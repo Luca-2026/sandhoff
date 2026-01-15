@@ -33,15 +33,15 @@ export function HeroSection() {
 
           {/* Headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight mb-6 animate-fade-in-up">
-            Videokonferenz- & AV-Lösungen für{" "}
-            <span className="gradient-text">moderne Arbeitswelten</span>
+            Videokonferenz- und AV-Lösungen, die{" "}
+            <span className="gradient-text">Zusammenarbeit neu definieren</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            Von der Konzeption bis zum laufenden Betrieb: Ich plane und integriere 
-            Ihre Konferenz-, Schulungs- und Kollaborationsräume – technologieneutral 
-            und auf Ihre Anforderungen zugeschnitten.
+            Wir planen, integrieren und betreuen Ihre Videokonferenz- und AV-Lösungen – 
+            von der ersten Idee bis zum produktiven Betrieb. Plug-and-play-Erlebnisse 
+            statt Technik-Hürden.
           </p>
 
           {/* CTA Buttons */}

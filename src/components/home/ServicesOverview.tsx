@@ -44,11 +44,11 @@ export function ServicesOverview() {
           }`}
         >
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            Meine Leistungen
+            Unsere Leistungen
           </h2>
           <p className="text-lg text-muted-foreground">
-            Von der ersten Idee bis zum laufenden Betrieb – ich begleite Ihr Projekt 
-            in allen Phasen mit meiner Expertise.
+            Von der ersten Idee bis zum laufenden Betrieb – wir begleiten Ihr Projekt 
+            in allen Phasen mit unserer Expertise.
           </p>
         </div>
 
