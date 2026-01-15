@@ -27,10 +27,10 @@ const references = [
     id: "gea-farm",
     company: "GEA Farm Technologies",
     category: "Management Room",
-    description: "Konzeption und Umsetzung eines modernen Managementraums mit nahtloser UC-Integration.",
+    description: "Moderner Managementraum mit Huddly L1 Kamera, Nureva HDL-310 Audiobar und zwei 75\" Iiyama 4K Displays.",
     icon: Users,
-    tags: ["UC-Integration", "Akustik", "Mediensteuerung"],
-    image: null,
+    tags: ["Huddly L1", "Nureva", "Iiyama 4K"],
+    image: "/assets/projects/gea-farm/gea-main.jpg",
   },
 ];
 
