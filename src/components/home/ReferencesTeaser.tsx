@@ -54,7 +54,7 @@ export function ReferencesTeaser() {
             Ausgewählte Referenzen
           </h2>
           <p className="text-lg text-muted-foreground">
-            Ein Auszug aus meinen realisierten Projekten – von Boardrooms bis Multi-Room-Rollouts.
+            Ein Auszug aus unseren realisierten Projekten – von Boardrooms bis Multi-Room-Rollouts.
           </p>
         </div>
 
