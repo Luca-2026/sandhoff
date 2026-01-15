@@ -1,0 +1,100 @@
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+const navigation = [
+  { name: "Startseite", href: "/" },
+  { name: "Leistungen", href: "/leistungen" },
+  { name: "Projekte", href: "/projekte" },
+  { name: "Über uns", href: "/ueber-uns" },
+  { name: "Kontakt", href: "/kontakt" },
+];
+
+export function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
+      <nav className="section-container flex items-center justify-between h-16 lg:h-20">
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-2">
+          <div className="flex flex-col">
+            <span className="text-xl font-bold text-foreground">Sandhoff</span>
+            <span className="text-[10px] text-muted-foreground tracking-wider uppercase">
+              IT- & Mediensysteme
+            </span>
+          </div>
+        </Link>
+
+        {/* Desktop Navigation */}
+        <div className="hidden lg:flex items-center gap-8">
+          {navigation.map((item) => (
+            <Link
+              key={item.name}
+              to={item.href}
+              className={cn(
+                "text-sm font-medium transition-colors hover:text-primary",
+                location.pathname === item.href
+                  ? "text-primary"
+                  : "text-muted-foreground"
+              )}
+            >
+              {item.name}
+            </Link>
+          ))}
+        </div>
+
+        {/* Desktop CTA */}
+        <div className="hidden lg:block">
+          <Button asChild className="btn-glow">
+            <Link to="/projektanfrage">Projektanfrage starten</Link>
+          </Button>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          type="button"
+          className="lg:hidden p-2 text-muted-foreground hover:text-foreground"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          {mobileMenuOpen ? (
+            <X className="h-6 w-6" />
+          ) : (
+            <Menu className="h-6 w-6" />
+          )}
+        </button>
+      </nav>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden bg-background border-b border-border animate-fade-in">
+          <div className="section-container py-4 space-y-4">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className={cn(
+                  "block py-2 text-base font-medium transition-colors",
+                  location.pathname === item.href
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-foreground"
+                )}
+              >
+                {item.name}
+              </Link>
+            ))}
+            <Button asChild className="w-full mt-4">
+              <Link to="/projektanfrage" onClick={() => setMobileMenuOpen(false)}>
+                Projektanfrage starten
+              </Link>
+            </Button>
+          </div>
+        </div>
+      )}
+    </header>
+  );
+}
