@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -12,7 +12,10 @@ import {
   ArrowRight,
   MapPin,
   Calendar,
-  CheckCircle
+  CheckCircle,
+  ChevronLeft,
+  ChevronRight,
+  X
 } from "lucide-react";
 
 const categories = [
@@ -99,6 +102,19 @@ const projects = [
 const Projekte = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [expandedProject, setExpandedProject] = useState<string | null>(null);
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
+  const location = useLocation();
+
+  // Scroll to project if hash is present
+  useEffect(() => {
+    if (location.hash) {
+      const projectId = location.hash.slice(1);
+      setExpandedProject(projectId);
+      setTimeout(() => {
+        document.getElementById(projectId)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 100);
+    }
+  }, [location.hash]);
 
   const filteredProjects = projects.filter(
     (p) => activeCategory === "all" || p.category === activeCategory
@@ -150,7 +166,8 @@ const Projekte = () => {
             {filteredProjects.map((project, index) => (
               <Card
                 key={project.id}
-                className="bg-card border-border overflow-hidden animate-fade-in-up"
+                id={project.id}
+                className="bg-card border-border overflow-hidden animate-fade-in-up scroll-mt-32"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="grid lg:grid-cols-2">
@@ -199,6 +216,27 @@ const Projekte = () => {
 
                     {expandedProject === project.id ? (
                       <div className="space-y-6 animate-fade-in">
+                        {/* Gallery */}
+                        {project.galleryImages && project.galleryImages.length > 0 && (
+                          <div>
+                            <h3 className="font-semibold text-foreground mb-3">Bildergalerie</h3>
+                            <div className="grid grid-cols-3 gap-2">
+                              {project.galleryImages.map((img, idx) => (
+                                <button
+                                  key={idx}
+                                  onClick={() => setLightboxImage(img)}
+                                  className="aspect-video bg-secondary rounded overflow-hidden hover:opacity-80 transition-opacity"
+                                >
+                                  <img 
+                                    src={img} 
+                                    alt={`${project.company} - Bild ${idx + 1}`}
+                                    className="w-full h-full object-cover"
+                                  />
+                                </button>
+                              ))}
+                            </div>
+                          </div>
+                        )}
                         <div>
                           <h3 className="font-semibold text-foreground mb-2">Ausgangslage</h3>
                           <p className="text-sm text-muted-foreground">{project.challenge}</p>
@@ -271,6 +309,27 @@ const Projekte = () => {
           </Button>
         </div>
       </section>
+
+      {/* Lightbox */}
+      {lightboxImage && (
+        <div 
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+          onClick={() => setLightboxImage(null)}
+        >
+          <button 
+            className="absolute top-4 right-4 text-white hover:text-primary transition-colors"
+            onClick={() => setLightboxImage(null)}
+          >
+            <X className="h-8 w-8" />
+          </button>
+          <img 
+            src={lightboxImage} 
+            alt="Projektbild vergrößert"
+            className="max-w-full max-h-full object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </Layout>
   );
 };
