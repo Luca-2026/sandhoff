@@ -25,12 +25,11 @@ export function Footer() {
           {/* Brand & Description */}
           <div className="lg:col-span-1">
             <Link to="/" className="inline-block mb-4">
-              <div className="flex flex-col">
-                <span className="text-xl font-bold text-foreground">Sandhoff</span>
-                <span className="text-[10px] text-muted-foreground tracking-wider uppercase">
-                  IT- & Mediensysteme
-                </span>
-              </div>
+              <img 
+                src="/assets/sandhoff-logo.jpg" 
+                alt="Sandhoff IT- & Mediensysteme" 
+                className="h-12 w-auto"
+              />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Videokonferenz- & AV-Lösungen für moderne Arbeitswelten. 
