@@ -78,15 +78,14 @@ const UeberUns = () => {
               </Button>
             </div>
 
-            {/* Image Placeholder */}
+            {/* Portrait Image */}
             <div className="relative">
-              <div className="aspect-[3/4] bg-secondary rounded-2xl flex items-center justify-center overflow-hidden">
-                <User className="h-32 w-32 text-muted-foreground/20" />
-                <div className="absolute inset-0 flex items-end justify-center pb-8">
-                  <p className="text-sm text-muted-foreground text-center px-4">
-                    Bildplatzhalter – Hier kommt ein Portraitfoto
-                  </p>
-                </div>
+              <div className="aspect-[3/4] bg-secondary rounded-2xl overflow-hidden">
+                <img 
+                  src="/assets/team/lukas-sandhoff.jpg" 
+                  alt="Luca Sandhoff - IT- & Mediensysteme"
+                  className="w-full h-full object-cover object-[center_25%]"
+                />
               </div>
               {/* Decorative Element */}
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-2xl -z-10" />
