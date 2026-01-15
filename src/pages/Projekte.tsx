@@ -63,8 +63,10 @@ const projects = [
     location: "Köln",
     year: "2023",
     icon: Monitor,
-    heroImage: "/assets/projects/pfeifer-langen/pl-main.jpg",
+    heroImage: "/assets/projects/pfeifer-langen/pl-boardroom.jpg",
     galleryImages: [
+      "/assets/projects/pfeifer-langen/pl-boardroom.jpg",
+      "/assets/projects/pfeifer-langen/pl-main.jpg",
       "/assets/projects/pfeifer-langen/pl-meeting-room.jpg",
       "/assets/projects/pfeifer-langen/pl-construction.jpg",
       "/assets/projects/pfeifer-langen/pl-installation.jpg",
