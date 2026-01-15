@@ -51,7 +51,7 @@ export function ProcessTimeline() {
         {/* Timeline */}
         <div className="relative">
           {/* Connection Line - Desktop */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-border -translate-y-1/2" />
+          <div className="hidden lg:block absolute top-8 left-[10%] right-[10%] h-0.5 bg-border" />
           
           <div className="grid lg:grid-cols-5 gap-8">
             {steps.map((step, index) => (
@@ -60,23 +60,24 @@ export function ProcessTimeline() {
                 className="relative flex flex-col items-center text-center animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                {/* Icon Circle */}
-                <div className="relative z-10 w-16 h-16 rounded-full bg-background border-2 border-primary flex items-center justify-center mb-4">
-                  <step.icon className="h-7 w-7 text-primary" />
+                {/* Icon Circle with Number */}
+                <div className="relative z-10 w-16 h-16 rounded-full bg-primary flex items-center justify-center mb-6">
+                  <step.icon className="h-7 w-7 text-primary-foreground" />
+                  {/* Number Badge */}
+                  <span className="absolute -top-2 -right-2 w-7 h-7 flex items-center justify-center text-xs font-bold text-primary-foreground bg-accent rounded-full border-2 border-background">
+                    {step.number}
+                  </span>
                 </div>
 
-                {/* Number Badge */}
-                <span className="absolute top-0 right-1/2 translate-x-8 -translate-y-1 text-xs font-bold text-primary bg-primary/10 px-2 py-0.5 rounded-full">
-                  {step.number}
-                </span>
-
-                {/* Content */}
-                <h3 className="text-lg font-semibold text-foreground mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  {step.description}
-                </p>
+                {/* Content - Fixed Height */}
+                <div className="flex flex-col flex-1">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
