@@ -19,7 +19,7 @@ export function SEOHead({
   type = "website",
   structuredData,
 }: SEOHeadProps) {
-  const baseUrl = "https://sandhoff.lovable.app";
+  const baseUrl = "https://www.sandhoff.org";
   const fullTitle = `${title} | Sandhoff IT- & Mediensysteme`;
   const fullCanonical = canonical ? `${baseUrl}${canonical}` : baseUrl;
   const fullOgImage = ogImage.startsWith("http") ? ogImage : `${baseUrl}${ogImage}`;
