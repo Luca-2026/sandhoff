@@ -14,9 +14,9 @@ const Index = () => {
   return (
     <Layout>
       <SEOHead
-        title="Videokonferenz & AV-Lösungen"
-        description="Herstellerunabhängige Beratung und Planung von Videokonferenz- und AV-Lösungen. Von der Konzeption bis zum Betrieb – für Konferenzräume, Schulungsräume und hybride Arbeitswelten."
-        keywords="Videokonferenz, AV-Lösungen, Konferenzraum, Medientechnik, Microsoft Teams Rooms, Zoom Rooms, Hybride Meetings"
+        title="Ingenieurbüro für Medientechnik & AV-Fachplanung"
+        description="Ingenieurbüro für Medientechnik in NRW: Herstellerneutrale Fachplanung, Ausschreibung und Beratung für Videokonferenz- und AV-Systeme. Von der Konzeption bis zum Betrieb."
+        keywords="Ingenieurbüro Medientechnik, AV-Fachplanung, Medientechnik Consultant, Ausschreibung Konferenztechnik, AV-Beratung NRW, Fachplaner Videokonferenz, Köln, Bonn"
         canonical="/"
       />
       <HeroSection />

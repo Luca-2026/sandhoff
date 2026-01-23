@@ -38,9 +38,9 @@ const News = () => {
   return (
     <Layout>
       <SEOHead
-        title="News – Aktuelles aus der AV-Welt"
-        description="Neuigkeiten, Trends und Innovationen aus der Welt der professionellen Medientechnik. Bleiben Sie informiert über ISE, InfoComm und weitere AV-Highlights."
-        keywords="AV News, Medientechnik Trends, ISE 2026, Konferenztechnik News, ProAV Innovationen"
+        title="News: Aktuelles aus der Medientechnik-Welt"
+        description="Neuigkeiten, Trends und Innovationen aus der professionellen Medientechnik. Berichte von ISE, InfoComm und aktuelle AV-Branchenthemen."
+        keywords="Medientechnik News, AV Trends, ISE 2026, ProAV Innovationen, Konferenztechnik Neuheiten"
         canonical="/news"
       />
 

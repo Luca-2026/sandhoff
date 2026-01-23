@@ -131,9 +131,9 @@ const Projekte = () => {
   return (
     <Layout>
       <SEOHead
-        title="Referenzen & Projektbeispiele"
-        description="Erfolgreiche AV-Projekte: Von Boardrooms über Schulungsräume bis zu Multi-Room-Rollouts. Sehen Sie unsere realisierten Videokonferenz- und Medientechnik-Lösungen."
-        keywords="AV Referenzen, Videokonferenz Projekte, Konferenzraum Beispiele, LED-Wall Installation, Medientechnik Referenzen"
+        title="Referenzen: Realisierte Medientechnik-Projekte"
+        description="Erfolgreiche AV-Projekte: Boardrooms, Schulungsräume, Multi-Room-Rollouts. Sehen Sie Referenzen unseres Ingenieurbüros für Medientechnik in NRW."
+        keywords="Medientechnik Referenzen, AV-Projekt Beispiele, Konferenzraum Installation, LED-Wall Projekt, Ingenieurbüro Referenzen NRW"
         canonical="/projekte"
       />
       {/* Hero Section */}

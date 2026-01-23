@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -28,9 +29,9 @@ const faqs = [
       "Die Dauer hängt vom Projektumfang ab. Ein einzelner Konferenzraum kann in 4-8 Wochen umgesetzt werden, größere Rollouts benötigen entsprechend mehr Zeit. Im Erstgespräch erstellen wir einen realistischen Zeitplan.",
   },
   {
-    question: "Unterstützen Sie auch bei der Beschaffung?",
+    question: "Unterstützen Sie auch bei der Beschaffung und Ausschreibung?",
     answer:
-      "Ja, wir begleiten den gesamten Beschaffungsprozess: Von der Erstellung herstellerneutraler Leistungsverzeichnisse über die Bewertung der Angebote bis zur finalen Vergabeempfehlung.",
+      "Ja, wir begleiten als Ingenieurbüro den gesamten Beschaffungsprozess: Von der Erstellung herstellerneutraler Leistungsverzeichnisse über die Bewertung der Angebote bis zur finalen Vergabeempfehlung – HOAI-konform und transparent.",
   },
   {
     question: "Was umfasst der Managed Service?",
@@ -39,9 +40,43 @@ const faqs = [
   },
 ];
 
+// Generate FAQ Schema for SEO
+const generateFAQSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer,
+    },
+  })),
+});
+
 export function FAQSection() {
   const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation();
   const { ref: accordionRef, isVisible: accordionVisible } = useScrollAnimation();
+
+  // Inject FAQ Schema into head
+  useEffect(() => {
+    const existingScript = document.querySelector('script[data-faq-schema]');
+    if (existingScript) {
+      existingScript.remove();
+    }
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.setAttribute("data-faq-schema", "true");
+    script.textContent = JSON.stringify(generateFAQSchema());
+    document.head.appendChild(script);
+
+    return () => {
+      const script = document.querySelector('script[data-faq-schema]');
+      if (script) {
+        script.remove();
+      }
+    };
+  }, []);
 
   return (
     <section className="py-20 lg:py-28 bg-card">

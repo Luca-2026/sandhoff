@@ -124,9 +124,9 @@ const Loesungen = () => {
   return (
     <Layout>
       <SEOHead
-        title="Lösungen für Konferenzräume & AV-Technik"
-        description="Maßgeschneiderte AV-Lösungen für Konferenzräume, Auditorien, Schulungsräume und Produktionsumgebungen. Von der Planung bis zur Integration."
-        keywords="Konferenzraum Lösung, Auditorium Technik, Schulungsraum Ausstattung, Digital Signage, Hybride Meetings, LED-Wall"
+        title="Raumlösungen: Konferenzraum, Auditorium & mehr"
+        description="Maßgeschneiderte AV-Lösungen für Konferenzräume, Auditorien, Schulungsräume und Industrie. Fachplanung und Integration von Medientechnik in NRW und deutschlandweit."
+        keywords="Konferenzraum Planung, Auditorium Medientechnik, Schulungsraum AV, Digital Signage Fachplanung, Hybride Meetings Lösung, AV-Integration NRW"
         canonical="/loesungen"
       />
       {/* Hero Section */}
