@@ -23,7 +23,7 @@ const articlesData: Record<string, ArticleData> = {
     title: "Neues aus der AV-Welt von der ISE 2026 in Barcelona",
     metaDescription: "Highlights und Innovationen von der ISE 2026 in Barcelona – die weltweit größte Fachmesse für professionelle AV-Technik. Trends, Produktneuheiten und Eindrücke.",
     keywords: "ISE 2026, Barcelona, AV Messe, Medientechnik Trends, ProAV, Integrated Systems Europe",
-    date: "2026-02-04",
+    date: "2026-02-03",
     readTime: "5 Min.",
     category: "Messe",
     content: (
@@ -34,7 +34,7 @@ const articlesData: Record<string, ArticleData> = {
             <span className="font-semibold text-foreground">Fira Barcelona, Gran Via</span>
           </div>
           <p className="text-muted-foreground mb-0">
-            <strong>Datum:</strong> 4. – 7. Februar 2026<br />
+            <strong>Datum:</strong> 3. – 6. Februar 2026<br />
             <strong>Ort:</strong> Barcelona, Spanien
           </p>
         </div>

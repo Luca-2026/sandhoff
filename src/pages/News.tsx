@@ -24,7 +24,7 @@ const newsArticles: NewsArticle[] = [
     slug: "ise-2026-barcelona",
     title: "Neues aus der AV-Welt von der ISE 2026 in Barcelona",
     excerpt: "Die ISE 2026 in Barcelona präsentiert die neuesten Innovationen in der AV-Branche. Wir berichten über die wichtigsten Trends, Produktneuheiten und Highlights der weltweit größten Fachmesse für professionelle audiovisuelle Technik und Systemintegration.",
-    date: "2026-02-04",
+    date: "2026-02-03",
     readTime: "5 Min.",
     category: "Messe",
     featured: true,
