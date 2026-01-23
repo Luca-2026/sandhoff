@@ -14,6 +14,8 @@ import Kontakt from "./pages/Kontakt";
 import Projektanfrage from "./pages/Projektanfrage";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
+import News from "./pages/News";
+import NewsArticle from "./pages/NewsArticle";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +36,8 @@ const App = () => (
           <Route path="/ueber-uns" element={<UeberUns />} />
           <Route path="/kontakt" element={<Kontakt />} />
           <Route path="/projektanfrage" element={<Projektanfrage />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/news/:slug" element={<NewsArticle />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
           <Route path="*" element={<NotFound />} />
