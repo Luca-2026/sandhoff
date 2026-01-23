@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
+import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -258,6 +259,12 @@ const Projektanfrage = () => {
 
   return (
     <Layout>
+      <SEOHead
+        title="Projektanfrage starten"
+        description="Starten Sie Ihr AV-Projekt: In 5 Schritten zur individuellen Anfrage für Videokonferenz- und Medientechnik-Lösungen."
+        keywords="Projektanfrage, AV-Projekt, Videokonferenz Anfrage, Medientechnik Beratung"
+        canonical="/projektanfrage"
+      />
       {/* Hero Section */}
       <section className="py-12 lg:py-16 bg-gradient-to-b from-primary/5 to-background">
         <div className="section-container">

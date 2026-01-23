@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
+import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { 
@@ -46,6 +47,12 @@ const timeline = [
 const UeberUns = () => {
   return (
     <Layout>
+      <SEOHead
+        title="Über mich – Luca Sandhoff"
+        description="Luca Sandhoff: Spezialist für Videokonferenz- und AV-Lösungen mit über 8 Jahren Erfahrung. Herstellerneutrale Beratung für Ihr Unternehmen."
+        keywords="Luca Sandhoff, AV-Berater, Videokonferenz Experte, Medientechnik Spezialist, Herstellerneutral"
+        canonical="/ueber-uns"
+      />
       {/* Hero Section */}
       <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 to-background">
         <div className="section-container">
