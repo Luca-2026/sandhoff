@@ -124,6 +124,12 @@ const serviceInclusions = [
 const Finanzierung = () => {
   return (
     <Layout>
+      <SEOHead
+        title="Finanzierung & Servicemodelle"
+        description="Flexible Finanzierungsoptionen für Medientechnik: Kauf, Leasing, Miete oder AV-as-a-Service. Finden Sie das passende Modell für Ihr Unternehmen."
+        keywords="AV Finanzierung, Leasing Medientechnik, AV-as-a-Service, Videokonferenz Miete, TCO Berechnung"
+        canonical="/finanzierung"
+      />
       {/* Hero Section */}
       <section className="py-20 lg:py-28 bg-gradient-to-b from-primary/5 to-background">
         <div className="section-container">

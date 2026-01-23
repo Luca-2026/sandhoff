@@ -1,9 +1,16 @@
 import { Layout } from "@/components/layout/Layout";
+import { SEOHead } from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 
 const Impressum = () => {
   return (
     <Layout>
+      <SEOHead
+        title="Impressum"
+        description="Impressum von Sandhoff IT- & Mediensysteme. Angaben gemäß § 5 TMG."
+        keywords="Impressum, Kontakt, Sandhoff"
+        canonical="/impressum"
+      />
       <section className="py-20 lg:py-28">
         <div className="section-container">
           <div className="max-w-3xl mx-auto">

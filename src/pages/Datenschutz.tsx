@@ -1,9 +1,16 @@
 import { Layout } from "@/components/layout/Layout";
+import { SEOHead } from "@/components/SEOHead";
 import { Badge } from "@/components/ui/badge";
 
 const Datenschutz = () => {
   return (
     <Layout>
+      <SEOHead
+        title="Datenschutzerklärung"
+        description="Datenschutzerklärung von Sandhoff IT- & Mediensysteme. Informationen zur Datenverarbeitung gemäß DSGVO."
+        keywords="Datenschutz, DSGVO, Datenschutzerklärung"
+        canonical="/datenschutz"
+      />
       <section className="py-20 lg:py-28">
         <div className="section-container">
           <div className="max-w-3xl mx-auto">
