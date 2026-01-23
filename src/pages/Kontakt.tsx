@@ -74,9 +74,9 @@ const Kontakt = () => {
   return (
     <Layout>
       <SEOHead
-        title="Kontakt & Beratung"
-        description="Kontaktieren Sie Sandhoff IT- & Mediensysteme für Ihre Videokonferenz- und AV-Projekte. Kostenlose Erstberatung für Unternehmen."
-        keywords="AV-Beratung Kontakt, Videokonferenz Beratung, Medientechnik Anfrage"
+        title="Kontakt: AV-Beratung & Projektanfrage"
+        description="Kontaktieren Sie unser Ingenieurbüro für Medientechnik. Kostenlose Erstberatung für Fachplanung, Ausschreibung und AV-Projekte in NRW und deutschlandweit."
+        keywords="Medientechnik Beratung Kontakt, AV-Consultant anfragen, Fachplanung Erstgespräch, Ingenieurbüro Medientechnik NRW"
         canonical="/kontakt"
       />
       {/* Hero Section */}

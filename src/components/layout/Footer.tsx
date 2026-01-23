@@ -2,10 +2,23 @@ import { Link } from "react-router-dom";
 import { Mail, MapPin, Linkedin } from "lucide-react";
 
 const footerLinks = {
+  leistungen: [
+    { name: "Fachplanung & Beratung", href: "/leistungen#konzeption" },
+    { name: "Ausschreibung & Vergabe", href: "/leistungen#fachplanung" },
+    { name: "IT-Integration & Betrieb", href: "/leistungen#integration" },
+    { name: "Finanzierung", href: "/finanzierung" },
+  ],
+  loesungen: [
+    { name: "Konferenzräume", href: "/loesungen#konferenzraum-detail" },
+    { name: "Auditorien", href: "/loesungen#auditorium-detail" },
+    { name: "Schulungsräume", href: "/loesungen#bildung-detail" },
+    { name: "Digital Signage", href: "/loesungen#empfang-detail" },
+  ],
   navigation: [
     { name: "Startseite", href: "/" },
-    { name: "Leistungen", href: "/leistungen" },
+    { name: "Technologien", href: "/technologien" },
     { name: "Projekte", href: "/projekte" },
+    { name: "News", href: "/news" },
     { name: "Über uns", href: "/ueber-uns" },
     { name: "Kontakt", href: "/kontakt" },
   ],
@@ -21,7 +34,7 @@ export function Footer() {
   return (
     <footer className="bg-card border-t border-border">
       <div className="section-container py-12 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
           {/* Brand & Description */}
           <div className="lg:col-span-1">
             <Link to="/" className="inline-block mb-4">
@@ -32,9 +45,47 @@ export function Footer() {
               />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Videokonferenz- & AV-Lösungen für moderne Arbeitswelten. 
-              Herstellerunabhängige Fachplanung und IT-Integration.
+              Ingenieurbüro für Medientechnik in NRW. 
+              Herstellerneutrale Fachplanung und AV-Beratung.
             </p>
+          </div>
+
+          {/* Leistungen */}
+          <div>
+            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">
+              Leistungen
+            </h3>
+            <ul className="space-y-3">
+              {footerLinks.leistungen.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Lösungen */}
+          <div>
+            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">
+              Lösungen
+            </h3>
+            <ul className="space-y-3">
+              {footerLinks.loesungen.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.href}
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Navigation */}
@@ -53,15 +104,6 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
-            </ul>
-          </div>
-
-          {/* Legal */}
-          <div>
-            <h3 className="text-sm font-semibold text-foreground uppercase tracking-wider mb-4">
-              Rechtliches
-            </h3>
-            <ul className="space-y-3">
               {footerLinks.legal.map((link) => (
                 <li key={link.name}>
                   <Link

@@ -167,9 +167,9 @@ const Technologien = () => {
   return (
     <Layout>
       <SEOHead
-        title="Technologien & AV-Produkte"
-        description="Herstellerneutrale Beratung zu Videokonferenzsystemen, Displays, Audiotechnik und Mediensteuerung. Zertifiziert bei führenden AV-Herstellern."
-        keywords="Videokonferenzsystem, Microsoft Teams Rooms, Zoom Rooms, LED-Wall, Shure Mikrofon, Crestron Steuerung, AV-Technik"
+        title="AV-Technologien & Hersteller-Expertise"
+        description="Herstellerneutrale Beratung zu Videokonferenzsystemen, Displays, Audiotechnik und Mediensteuerung. Zertifizierter Partner von Shure, Crestron, Barco und mehr."
+        keywords="AV-Technologie Beratung, Videokonferenzsystem Auswahl, Shure Mikrofon, Crestron Steuerung, Microsoft Teams Rooms, Zoom Rooms, Fachplaner Medientechnik"
         canonical="/technologien"
       />
       {/* Hero Section */}

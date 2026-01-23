@@ -68,9 +68,9 @@ const Leistungen = () => {
   return (
     <Layout>
       <SEOHead
-        title="Leistungen: Konzeption, Planung & Betrieb"
-        description="AV-Beratung von der Konzeption über Fachplanung und Ausschreibung bis zum laufenden Betrieb. Herstellerneutral und auf Ihre Anforderungen zugeschnitten."
-        keywords="AV-Beratung, Medientechnik Planung, Ausschreibung Konferenzraum, IT-Integration, Managed Service AV"
+        title="Fachplanung & Ausschreibung für Medientechnik"
+        description="Herstellerneutrale AV-Fachplanung von der Konzeption über Ausschreibung bis zum Betrieb. Ingenieurbüro für Medientechnik in NRW – Konferenzräume, Schulungsräume, Auditorien."
+        keywords="AV-Fachplanung, Ausschreibung Medientechnik, Ingenieurbüro Konferenztechnik, Leistungsverzeichnis AV, Medientechnik Consultant NRW"
         canonical="/leistungen"
       />
       {/* Hero Section */}

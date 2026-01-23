@@ -260,9 +260,9 @@ const Projektanfrage = () => {
   return (
     <Layout>
       <SEOHead
-        title="Projektanfrage starten"
-        description="Starten Sie Ihr AV-Projekt: In 5 Schritten zur individuellen Anfrage für Videokonferenz- und Medientechnik-Lösungen."
-        keywords="Projektanfrage, AV-Projekt, Videokonferenz Anfrage, Medientechnik Beratung"
+        title="Projektanfrage: AV-Fachplanung anfragen"
+        description="Starten Sie Ihr Medientechnik-Projekt: Anfrage für Fachplanung, Ausschreibung und Beratung in 5 Schritten. Kostenlose Erstberatung durch unser Ingenieurbüro."
+        keywords="Projektanfrage Medientechnik, AV-Fachplanung anfragen, Konferenzraum Beratung, Ausschreibung Videokonferenz"
         canonical="/projektanfrage"
       />
       {/* Hero Section */}

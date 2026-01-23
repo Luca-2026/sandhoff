@@ -48,9 +48,9 @@ const UeberUns = () => {
   return (
     <Layout>
       <SEOHead
-        title="Über mich – Luca Sandhoff"
-        description="Luca Sandhoff: Spezialist für Videokonferenz- und AV-Lösungen mit über 8 Jahren Erfahrung. Herstellerneutrale Beratung für Ihr Unternehmen."
-        keywords="Luca Sandhoff, AV-Berater, Videokonferenz Experte, Medientechnik Spezialist, Herstellerneutral"
+        title="Über uns – Ingenieurbüro für Medientechnik"
+        description="Luca Sandhoff: AV-Consultant und Fachplaner für Medientechnik mit über 8 Jahren Erfahrung. Herstellerneutrale Beratung für Unternehmen in NRW und deutschlandweit."
+        keywords="Luca Sandhoff, AV-Consultant, Medientechnik Fachplaner, Ingenieurbüro Medientechnik, AV-Berater NRW"
         canonical="/ueber-uns"
       />
       {/* Hero Section */}
