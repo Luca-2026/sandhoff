@@ -39,6 +39,16 @@ const newsArticles: NewsArticle[] = [
     category: "Praxistipp",
     image: "/assets/news/konferenzraum-chaos.jpg",
   },
+  {
+    id: "audio-probleme",
+    slug: "man-hoert-nichts-schon-wieder",
+    title: "Man hört nichts – schon wieder",
+    excerpt: "Ein Meeting startet, alle sind da – und trotzdem geht es nicht los, weil niemand etwas hört. Audio-Probleme gehören zu den häufigsten Störfaktoren in Konferenzräumen. Mikrofone sind falsch platziert, Räume akustisch ungeeignet oder die Technik wurde nie richtig aufeinander abgestimmt. Das kostet Zeit, Nerven und wirkt unprofessionell. Erfahren Sie, wie klare Sprachübertragung gelingt.",
+    date: "2026-01-25",
+    readTime: "4 Min.",
+    category: "Praxistipp",
+    image: "/assets/news/audio-probleme.jpg",
+  },
 ];
 
 const News = () => {
