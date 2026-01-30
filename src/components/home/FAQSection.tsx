@@ -31,7 +31,7 @@ const faqs = [
   {
     question: "Unterstützen Sie auch bei der Beschaffung und Ausschreibung?",
     answer:
-      "Ja, wir begleiten als Ingenieurbüro den gesamten Beschaffungsprozess: Von der Erstellung herstellerneutraler Leistungsverzeichnisse über die Bewertung der Angebote bis zur finalen Vergabeempfehlung – HOAI-konform und transparent.",
+      "Ja, wir begleiten als Fachplaner den gesamten Beschaffungsprozess: Von der Erstellung herstellerneutraler Leistungsverzeichnisse über die Bewertung der Angebote bis zur finalen Vergabeempfehlung – HOAI-konform und transparent.",
   },
   {
     question: "Was umfasst der Managed Service?",
