@@ -4,7 +4,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowLeft, Calendar, Clock, MapPin, ExternalLink } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, MapPin, ExternalLink, Download } from "lucide-react";
 
 interface ArticleData {
   slug: string;
@@ -227,6 +227,12 @@ const articlesData: Record<string, ArticleData> = {
               <Link to="/projektanfrage">
                 Teststellung anfragen
               </Link>
+            </Button>
+            <Button variant="outline" asChild>
+              <a href="/assets/docs/huddly-c1-datenblatt.pdf" download>
+                <Download className="mr-2 h-4 w-4" />
+                Datenblatt C1 (PDF)
+              </a>
             </Button>
             <Button variant="outline" asChild>
               <a href="https://www.huddly.com" target="_blank" rel="noopener noreferrer">
