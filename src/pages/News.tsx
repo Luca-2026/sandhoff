@@ -29,6 +29,16 @@ const newsArticles: NewsArticle[] = [
     category: "Messe",
     featured: true,
   },
+  {
+    id: "konferenzraum-chaos",
+    slug: "hochwertige-technik-trotzdem-chaos",
+    title: "Hochwertige Technik – trotzdem Chaos im Konferenzraum?",
+    excerpt: "Viele Konferenzräume sind mit erstklassiger Technik ausgestattet. Doch warum fühlt sich der Start eines Meetings trotzdem oft an wie eine technische Herausforderung? Fünf Fernbedienungen, ein Kabelsalat unter dem Tisch und die ewige Frage: Welcher Eingang war nochmal der richtige? Technik sollte unterstützen – nicht überfordern. Erfahren Sie, wie intuitive Lösungen den Alltag vereinfachen.",
+    date: "2026-01-28",
+    readTime: "3 Min.",
+    category: "Praxistipp",
+    image: "/assets/news/konferenzraum-chaos.jpg",
+  },
 ];
 
 const News = () => {
@@ -119,7 +129,16 @@ const News = () => {
             <h2 className="text-2xl font-bold text-foreground mb-8">Weitere Beiträge</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {regularArticles.map((article) => (
-                <Card key={article.id} className="card-hover">
+                <Card key={article.id} className="card-hover overflow-hidden">
+                  {article.image && (
+                    <div className="aspect-video bg-muted overflow-hidden">
+                      <img 
+                        src={article.image} 
+                        alt={article.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  )}
                   <CardHeader>
                     <div className="flex items-center gap-2 mb-2">
                       <Badge variant="outline">{article.category}</Badge>
