@@ -15,6 +15,9 @@ interface NewsArticle {
   readTime: string;
   category: string;
   image?: string;
+  videoBackground?: string;
+  youtubeEmbed?: string;
+  externalLink?: string;
   featured?: boolean;
 }
 
@@ -33,17 +36,29 @@ const newsArticles: NewsArticle[] = [
     id: "konferenzraum-chaos",
     slug: "hochwertige-technik-trotzdem-chaos",
     title: "Hochwertige Technik – trotzdem Chaos im Konferenzraum?",
-    excerpt: "Viele Konferenzräume sind mit erstklassiger Technik ausgestattet. Doch warum fühlt sich der Start eines Meetings trotzdem oft an wie eine technische Herausforderung? Fünf Fernbedienungen, ein Kabelsalat unter dem Tisch und die ewige Frage: Welcher Eingang war nochmal der richtige? Technik sollte unterstützen – nicht überfordern. Erfahren Sie, wie intuitive Lösungen den Alltag vereinfachen.",
+    excerpt: "Viele Konferenzräume sind mit erstklassiger Technik ausgestattet. Doch warum fühlt sich der Start eines Meetings trotzdem oft an wie eine technische Herausforderung? Fünf Fernbedienungen, ein Kabelsalat unter dem Tisch und die ewige Frage: Welcher Eingang war nochmal der richtige?",
     date: "2026-01-28",
     readTime: "3 Min.",
     category: "Praxistipp",
     image: "/assets/news/konferenzraum-chaos.jpg",
   },
   {
+    id: "huddly-speaker-mode",
+    slug: "huddly-speaker-mode-ki-kamera",
+    title: "Huddly Speaker Mode: KI-Kameras, die den Sprecher im Blick behalten",
+    excerpt: "Mit dem Huddly Speaker Mode sehen Sie jederzeit, wer spricht – unabhängig vom Platz im Raum. Die KI erkennt automatisch den aktiven Sprecher und passt das Bild dynamisch an. Sobald das Gespräch weitergeht, folgt das Bild automatisch. Als wäre immer ein Regisseur am Werk, der den Sprecher im Blick hält, damit Sie sich ganz auf den Inhalt konzentrieren können.",
+    date: "2026-01-26",
+    readTime: "4 Min.",
+    category: "Produktnews",
+    videoBackground: "https://stream.mux.com/7sXxfory8L02Y8tU2Ih02WajBQWENTUAnBcpQiKag021Dw.m3u8?min_resolution=720p",
+    youtubeEmbed: "https://www.youtube.com/watch?v=L-BYXom1cxw",
+    externalLink: "https://www.huddly.com",
+  },
+  {
     id: "audio-probleme",
     slug: "man-hoert-nichts-schon-wieder",
     title: "Man hört nichts – schon wieder",
-    excerpt: "Ein Meeting startet, alle sind da – und trotzdem geht es nicht los, weil niemand etwas hört. Audio-Probleme gehören zu den häufigsten Störfaktoren in Konferenzräumen. Mikrofone sind falsch platziert, Räume akustisch ungeeignet oder die Technik wurde nie richtig aufeinander abgestimmt. Das kostet Zeit, Nerven und wirkt unprofessionell. Erfahren Sie, wie klare Sprachübertragung gelingt.",
+    excerpt: "Ein Meeting startet, alle sind da – und trotzdem geht es nicht los, weil niemand etwas hört. Audio-Probleme gehören zu den häufigsten Störfaktoren in Konferenzräumen.",
     date: "2026-01-25",
     readTime: "4 Min.",
     category: "Praxistipp",
@@ -139,8 +154,20 @@ const News = () => {
             <h2 className="text-2xl font-bold text-foreground mb-8">Weitere Beiträge</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {regularArticles.map((article) => (
-                <Card key={article.id} className="card-hover overflow-hidden">
-                  {article.image && (
+                <Card key={article.id} className="card-hover overflow-hidden flex flex-col">
+                  {article.videoBackground ? (
+                    <div className="aspect-video bg-muted overflow-hidden relative">
+                      <video 
+                        src={article.videoBackground}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    </div>
+                  ) : article.image ? (
                     <div className="aspect-video bg-muted overflow-hidden">
                       <img 
                         src={article.image} 
@@ -148,7 +175,7 @@ const News = () => {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                  )}
+                  ) : null}
                   <CardHeader>
                     <div className="flex items-center gap-2 mb-2">
                       <Badge variant="outline">{article.category}</Badge>

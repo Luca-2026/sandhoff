@@ -108,6 +108,137 @@ const articlesData: Record<string, ArticleData> = {
       </div>
     ),
   },
+  "huddly-speaker-mode-ki-kamera": {
+    slug: "huddly-speaker-mode-ki-kamera",
+    title: "Huddly Speaker Mode: KI-Kameras, die den Sprecher im Blick behalten",
+    metaDescription: "Huddly Kameras mit Speaker Mode erkennen automatisch den aktiven Sprecher und passen das Bild dynamisch an. Erfahren Sie mehr über die C1 Videobar und KI-gesteuerte Kamerasysteme.",
+    keywords: "Huddly Speaker Mode, Huddly C1, KI Kamera, Videokonferenz Kamera, AI Tracking, Huddly L1, Huddly Crew",
+    date: "2026-01-26",
+    readTime: "4 Min.",
+    category: "Produktnews",
+    content: (
+      <div className="prose prose-lg max-w-none">
+        {/* Video Header */}
+        <div className="relative aspect-video rounded-lg overflow-hidden mb-8 bg-black">
+          <video 
+            src="https://stream.mux.com/7sXxfory8L02Y8tU2Ih02WajBQWENTUAnBcpQiKag021Dw.m3u8?min_resolution=720p"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">
+          Intelligentes Framing für natürliche Meetings
+        </h2>
+        <p className="text-muted-foreground leading-relaxed">
+          Mit dem <strong>Huddly Speaker Mode</strong> sehen Sie jederzeit, wer spricht – unabhängig vom Platz 
+          im Raum. Die KI erkennt automatisch den aktiven Sprecher und passt das Bild dynamisch an. 
+          Sobald das Gespräch weitergeht, folgt das Bild automatisch.
+        </p>
+        <p className="text-muted-foreground leading-relaxed">
+          <strong>Als wäre immer ein Regisseur am Werk</strong>, der den Sprecher im Blick hält, damit Sie 
+          sich ganz auf den Inhalt konzentrieren können.
+        </p>
+
+        <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">
+          Die Huddly C1 Videobar – KI-Power für kleine und mittlere Räume
+        </h2>
+        <p className="text-muted-foreground leading-relaxed">
+          Die <strong>Huddly C1</strong> ist eine AI-gesteuerte Videobar, die erstklassige Videoqualität mit 
+          innovativer Audio-Technologie verbindet. Mit einem ultra-weiten <strong>150°-Objektiv</strong> wird 
+          jeder Platz im Raum erfasst – niemand sitzt außerhalb des Bildes.
+        </p>
+        
+        <ul className="space-y-3 text-muted-foreground">
+          <li className="flex items-start gap-3">
+            <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+            <span><strong>4K-Sensor</strong> mit intelligenter Bildverarbeitung für gestochen scharfe Videos</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+            <span><strong>Huddly Intelligence:</strong> Onboard-KI für dynamisches Framing von Einzelpersonen und Gruppen</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+            <span><strong>Premium-Audio:</strong> Integrierte Mikrofone und Lautsprecher für kristallklare Kommunikation</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+            <span><strong>Modulares Design:</strong> Erweiterbar für zukünftige Anforderungen</span>
+          </li>
+        </ul>
+
+        <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">
+          Huddly Crew – Multi-Kamera-System mit KI-Regie
+        </h2>
+        <p className="text-muted-foreground leading-relaxed">
+          Für größere Räume bietet <strong>Huddly Crew</strong> ein revolutionäres Multi-Kamera-System. 
+          Die onboard KI übernimmt die Rolle eines virtuellen Regisseurs und wählt automatisch die beste 
+          Kameraperspektive – ob Sprecherfokus oder Gruppenansicht.
+        </p>
+        <p className="text-muted-foreground leading-relaxed">
+          Mit der neuesten <strong>3D Spatial Awareness</strong> Technologie erstellt das System eine 
+          dreidimensionale Karte des Raums für noch präziseres und natürlicheres Framing.
+        </p>
+
+        {/* YouTube Embed */}
+        <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">
+          Speaker Mode in Aktion
+        </h2>
+        <div className="aspect-video rounded-lg overflow-hidden mb-8">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/L-BYXom1cxw"
+            title="Huddly Speaker Mode Demo"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="border-0"
+          />
+        </div>
+
+        {/* Partner Box */}
+        <div className="mt-8 p-6 bg-primary/5 border border-primary/20 rounded-lg">
+          <h3 className="text-lg font-semibold text-foreground mb-3">
+            🎁 Exklusiv als Huddly Partner
+          </h3>
+          <p className="text-muted-foreground mb-4">
+            Als offizieller <strong>Huddly Partner</strong> bieten wir Ihnen:
+          </p>
+          <ul className="space-y-2 text-muted-foreground mb-4">
+            <li className="flex items-start gap-2">
+              <span className="text-primary font-bold">✓</span>
+              <span><strong>Sonderpreise</strong> für Huddly Kameras und Zubehör</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-primary font-bold">✓</span>
+              <span><strong>Kostenlose Teststellungen</strong> zum Ausprobieren in Ihren Räumen</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-primary font-bold">✓</span>
+              <span><strong>Fachberatung</strong> zur optimalen Kamera-Auswahl und Platzierung</span>
+            </li>
+          </ul>
+          <div className="flex flex-wrap gap-4">
+            <Button asChild>
+              <Link to="/projektanfrage">
+                Teststellung anfragen
+              </Link>
+            </Button>
+            <Button variant="outline" asChild>
+              <a href="https://www.huddly.com" target="_blank" rel="noopener noreferrer">
+                Huddly Website
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+          </div>
+        </div>
+      </div>
+    ),
+  },
 };
 
 const NewsArticle = () => {
