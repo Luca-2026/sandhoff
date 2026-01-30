@@ -14,8 +14,39 @@ interface ArticleData {
   date: string;
   readTime: string;
   category: string;
+  image?: string;
   content: React.ReactNode;
 }
+
+// Generate Article Schema for SEO
+const generateArticleSchema = (article: ArticleData) => ({
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": article.title,
+  "description": article.metaDescription,
+  "datePublished": article.date,
+  "dateModified": article.date,
+  "author": {
+    "@type": "Person",
+    "name": "Luca Sandhoff",
+    "url": "https://www.sandhoff.org/ueber-uns"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Sandhoff IT- & Mediensysteme",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.sandhoff.org/assets/sandhoff-logo.jpg"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `https://www.sandhoff.org/news/${article.slug}`
+  },
+  "image": article.image ? `https://www.sandhoff.org${article.image}` : "https://www.sandhoff.org/assets/sandhoff-logo.jpg",
+  "articleSection": article.category,
+  "keywords": article.keywords
+});
 
 const articlesData: Record<string, ArticleData> = {
   "ise-2026-barcelona": {
@@ -116,6 +147,7 @@ const articlesData: Record<string, ArticleData> = {
     date: "2026-01-26",
     readTime: "4 Min.",
     category: "Produktnews",
+    image: "/assets/partners/huddly.png",
     content: (
       <div className="prose prose-lg max-w-none">
         {/* Video Header */}
@@ -253,6 +285,7 @@ const articlesData: Record<string, ArticleData> = {
     date: "2026-01-28",
     readTime: "3 Min.",
     category: "Praxistipp",
+    image: "/assets/news/konferenzraum-chaos.jpg",
     content: (
       <div className="prose prose-lg max-w-none">
         <div className="aspect-video rounded-lg overflow-hidden mb-8">
@@ -346,6 +379,7 @@ const articlesData: Record<string, ArticleData> = {
     date: "2026-01-25",
     readTime: "4 Min.",
     category: "Praxistipp",
+    image: "/assets/news/audio-probleme.jpg",
     content: (
       <div className="prose prose-lg max-w-none">
         <div className="aspect-video rounded-lg overflow-hidden mb-8">
@@ -470,6 +504,8 @@ const NewsArticle = () => {
         description={article.metaDescription}
         keywords={article.keywords}
         canonical={`/news/${article.slug}`}
+        type="article"
+        structuredData={generateArticleSchema(article)}
       />
 
       {/* Article Header */}

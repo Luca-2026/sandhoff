@@ -45,8 +45,8 @@ export function Footer() {
               />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Ingenieurbüro für Medientechnik in NRW. 
-              Herstellerneutrale Fachplanung und AV-Beratung.
+              Fachplaner für Medientechnik in NRW. 
+              Herstellerneutrale AV-Beratung und Systemintegration.
             </p>
           </div>
 
