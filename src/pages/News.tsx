@@ -30,6 +30,7 @@ const newsArticles: NewsArticle[] = [
     date: "2026-02-03",
     readTime: "5 Min.",
     category: "Messe",
+    image: "/assets/news/ise-2026-barcelona.webp",
     featured: true,
   },
   {
@@ -130,12 +131,20 @@ const News = () => {
           <div className="section-container">
             <Card className="overflow-hidden border-primary/20 bg-gradient-to-br from-card to-primary/5">
               <div className="grid lg:grid-cols-2 gap-8">
-                <div className="aspect-video lg:aspect-auto bg-muted flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <MapPin className="h-16 w-16 text-primary mx-auto mb-4" />
-                    <p className="text-muted-foreground">ISE 2026 Barcelona</p>
-                    <p className="text-sm text-muted-foreground">4. – 7. Februar 2026</p>
-                  </div>
+                <div className="aspect-video lg:aspect-auto bg-black flex items-center justify-center overflow-hidden">
+                  {featuredArticle.image ? (
+                    <img 
+                      src={featuredArticle.image} 
+                      alt="Integrated Systems Europe ISE 2026 Barcelona - Weltleitmesse für AV und Systemintegration vom 3. bis 6. Februar 2026"
+                      className="w-full h-full object-contain p-4"
+                    />
+                  ) : (
+                    <div className="text-center p-8">
+                      <MapPin className="h-16 w-16 text-primary mx-auto mb-4" />
+                      <p className="text-muted-foreground">ISE 2026 Barcelona</p>
+                      <p className="text-sm text-muted-foreground">4. – 7. Februar 2026</p>
+                    </div>
+                  )}
                 </div>
                 <div className="p-8 flex flex-col justify-center">
                   <div className="flex items-center gap-4 mb-4">

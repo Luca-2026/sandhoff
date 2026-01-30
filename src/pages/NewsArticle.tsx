@@ -57,8 +57,18 @@ const articlesData: Record<string, ArticleData> = {
     date: "2026-02-03",
     readTime: "5 Min.",
     category: "Messe",
+    image: "/assets/news/ise-2026-barcelona.webp",
     content: (
       <div className="prose prose-lg max-w-none">
+        {/* Hero Image */}
+        <div className="aspect-video rounded-lg overflow-hidden mb-8 bg-black flex items-center justify-center">
+          <img 
+            src="/assets/news/ise-2026-barcelona.webp" 
+            alt="Integrated Systems Europe ISE 2026 Barcelona - Weltleitmesse für AV und Systemintegration vom 3. bis 6. Februar 2026"
+            className="w-full h-full object-contain p-4"
+          />
+        </div>
+
         <div className="bg-primary/5 border border-primary/20 rounded-lg p-6 mb-8">
           <div className="flex items-center gap-3 mb-3">
             <MapPin className="h-5 w-5 text-primary" />
