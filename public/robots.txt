@@ -1,4 +1,5 @@
 # Robots.txt für Sandhoff IT- & Mediensysteme
+# Canonical Domain: https://www.sandhoff.org
 
 User-agent: *
 Allow: /
@@ -6,15 +7,14 @@ Allow: /
 # Sitemap
 Sitemap: https://www.sandhoff.org/sitemap.xml
 
-# Crawl-delay für höfliches Crawling
-Crawl-delay: 1
-
 # Spezifische Bot-Regeln
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Twitterbot
 Allow: /
@@ -33,4 +33,10 @@ User-agent: SemrushBot
 Disallow: /
 
 User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
 Disallow: /

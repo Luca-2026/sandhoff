@@ -1,70 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.sandhoff.org/</loc>
-    <lastmod>2026-01-15</lastmod>
+    <lastmod>2026-01-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.sandhoff.org/leistungen</loc>
-    <lastmod>2026-01-15</lastmod>
+    <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.sandhoff.org/loesungen</loc>
-    <lastmod>2026-01-15</lastmod>
+    <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.sandhoff.org/technologien</loc>
-    <lastmod>2026-01-15</lastmod>
+    <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.sandhoff.org/finanzierung</loc>
-    <lastmod>2026-01-15</lastmod>
+    <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.sandhoff.org/projekte</loc>
-    <lastmod>2026-01-15</lastmod>
+    <lastmod>2026-01-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.sandhoff.org/ueber-uns</loc>
-    <lastmod>2026-01-15</lastmod>
+    <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.sandhoff.org/kontakt</loc>
-    <lastmod>2026-01-15</lastmod>
+    <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.sandhoff.org/projektanfrage</loc>
-    <lastmod>2026-01-15</lastmod>
+    <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.sandhoff.org/news</loc>
-    <lastmod>2026-01-23</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
+  <!-- News-Artikel -->
   <url>
     <loc>https://www.sandhoff.org/news/ise-2026-barcelona</loc>
-    <lastmod>2026-01-23</lastmod>
+    <lastmod>2026-02-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.sandhoff.org/news/huddly-speaker-mode-ki-kamera</loc>
+    <lastmod>2026-01-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.sandhoff.org/assets/partners/huddly.png</image:loc>
+      <image:title>Huddly Speaker Mode KI-Kamera</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.sandhoff.org/news/hochwertige-technik-trotzdem-chaos</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.sandhoff.org/assets/news/konferenzraum-chaos.jpg</image:loc>
+      <image:title>Konferenzraum Technik-Chaos</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.sandhoff.org/news/man-hoert-nichts-schon-wieder</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.sandhoff.org/assets/news/audio-probleme.jpg</image:loc>
+      <image:title>Audio-Probleme in Konferenzräumen</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://www.sandhoff.org/impressum</loc>
