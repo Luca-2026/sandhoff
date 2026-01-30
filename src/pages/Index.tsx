@@ -14,9 +14,9 @@ const Index = () => {
   return (
     <Layout>
       <SEOHead
-        title="Ingenieurbüro für Medientechnik & AV-Fachplanung"
-        description="Ingenieurbüro für Medientechnik in NRW: Herstellerneutrale Fachplanung, Ausschreibung und Beratung für Videokonferenz- und AV-Systeme. Von der Konzeption bis zum Betrieb."
-        keywords="Ingenieurbüro Medientechnik, AV-Fachplanung, Medientechnik Consultant, Ausschreibung Konferenztechnik, AV-Beratung NRW, Fachplaner Videokonferenz, Köln, Bonn"
+        title="Fachbüro für Medientechnik & AV-Fachplanung"
+        description="Fachbüro für Medientechnik in NRW: Herstellerneutrale Fachplanung, Ausschreibung und Beratung für Videokonferenz- und AV-Systeme. Von der Konzeption bis zum Betrieb."
+        keywords="Fachbüro Medientechnik, AV-Fachplanung, Medientechnik Consultant, Ausschreibung Konferenztechnik, AV-Beratung NRW, Fachplaner Videokonferenz, Köln, Bonn"
         canonical="/"
       />
       <HeroSection />

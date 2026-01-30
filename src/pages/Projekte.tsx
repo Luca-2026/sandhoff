@@ -132,8 +132,8 @@ const Projekte = () => {
     <Layout>
       <SEOHead
         title="Referenzen: Realisierte Medientechnik-Projekte"
-        description="Erfolgreiche AV-Projekte: Boardrooms, Schulungsräume, Multi-Room-Rollouts. Sehen Sie Referenzen unseres Ingenieurbüros für Medientechnik in NRW."
-        keywords="Medientechnik Referenzen, AV-Projekt Beispiele, Konferenzraum Installation, LED-Wall Projekt, Ingenieurbüro Referenzen NRW"
+        description="Erfolgreiche AV-Projekte: Boardrooms, Schulungsräume, Multi-Room-Rollouts. Sehen Sie Referenzen unseres Fachbüros für Medientechnik in NRW."
+        keywords="Medientechnik Referenzen, AV-Projekt Beispiele, Konferenzraum Installation, LED-Wall Projekt, Fachbüro Referenzen NRW"
         canonical="/projekte"
       />
       {/* Hero Section */}

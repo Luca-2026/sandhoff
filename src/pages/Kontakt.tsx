@@ -75,8 +75,8 @@ const Kontakt = () => {
     <Layout>
       <SEOHead
         title="Kontakt: AV-Beratung & Projektanfrage"
-        description="Kontaktieren Sie unser Ingenieurbüro für Medientechnik. Kostenlose Erstberatung für Fachplanung, Ausschreibung und AV-Projekte in NRW und deutschlandweit."
-        keywords="Medientechnik Beratung Kontakt, AV-Consultant anfragen, Fachplanung Erstgespräch, Ingenieurbüro Medientechnik NRW"
+        description="Kontaktieren Sie unser Fachbüro für Medientechnik. Kostenlose Erstberatung für Fachplanung, Ausschreibung und AV-Projekte in NRW und deutschlandweit."
+        keywords="Medientechnik Beratung Kontakt, AV-Consultant anfragen, Fachplanung Erstgespräch, Fachbüro Medientechnik NRW"
         canonical="/kontakt"
       />
       {/* Hero Section */}
