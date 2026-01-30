@@ -16,7 +16,8 @@ import {
   Gauge,
   Headphones,
   Wrench,
-  LineChart
+  LineChart,
+  Award
 } from "lucide-react";
 
 const services = [
@@ -54,12 +55,13 @@ const services = [
     title: "IT-Integration & Betrieb",
     subtitle: "Technik, die zuverlässig funktioniert",
     description:
-      "Die beste Technik bringt nichts, wenn sie nicht läuft. Ich sorge für nahtlose IT-Integration, proaktives Monitoring und schnellen Support – damit Ihre Systeme immer einsatzbereit sind.",
+      "Die beste Technik bringt nichts, wenn sie nicht läuft. Ich sorge für nahtlose IT-Integration, proaktives Monitoring und schnellen Support – damit Ihre Systeme immer einsatzbereit sind. Dabei arbeite ich nach ITIL v4 IT Service Management Standards für professionelle und strukturierte Serviceprozesse.",
     deliverables: [
       { icon: Wrench, title: "IT-Integration", description: "Nahtlose Einbindung in Ihre bestehende IT-Infrastruktur" },
       { icon: Gauge, title: "Proaktives Monitoring", description: "24/7 Systemüberwachung mit Alarmierung bei Problemen" },
       { icon: Headphones, title: "First-Level-Support", description: "Direkter Ansprechpartner für Ihre Nutzer" },
       { icon: LineChart, title: "Quartalsberichte", description: "Regelmäßige Analyse und Optimierungsempfehlungen" },
+      { icon: Award, title: "ITIL v4 zertifiziert", description: "Strukturierte Serviceprozesse nach internationalem IT-Service-Management-Standard" },
     ],
   },
 ];
