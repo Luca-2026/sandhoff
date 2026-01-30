@@ -69,8 +69,8 @@ const Leistungen = () => {
     <Layout>
       <SEOHead
         title="Fachplanung & Ausschreibung für Medientechnik"
-        description="Herstellerneutrale AV-Fachplanung von der Konzeption über Ausschreibung bis zum Betrieb. Ingenieurbüro für Medientechnik in NRW – Konferenzräume, Schulungsräume, Auditorien."
-        keywords="AV-Fachplanung, Ausschreibung Medientechnik, Ingenieurbüro Konferenztechnik, Leistungsverzeichnis AV, Medientechnik Consultant NRW"
+        description="Herstellerneutrale AV-Fachplanung von der Konzeption über Ausschreibung bis zum Betrieb. Fachbüro für Medientechnik in NRW – Konferenzräume, Schulungsräume, Auditorien."
+        keywords="AV-Fachplanung, Ausschreibung Medientechnik, Fachplaner Konferenztechnik, Leistungsverzeichnis AV, Medientechnik Consultant NRW"
         canonical="/leistungen"
       />
       {/* Hero Section */}
