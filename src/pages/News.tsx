@@ -66,6 +66,32 @@ const newsArticles: NewsArticle[] = [
   },
 ];
 
+// Generate CollectionPage Schema for News overview
+const generateNewsListSchema = () => ({
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "News & Aktuelles aus der Medientechnik-Welt",
+  "description": "Neuigkeiten, Trends und Innovationen aus der professionellen Medientechnik. Berichte von ISE, InfoComm und aktuelle AV-Branchenthemen.",
+  "url": "https://www.sandhoff.org/news",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Sandhoff IT- & Mediensysteme",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.sandhoff.org/assets/sandhoff-logo.jpg"
+    }
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": newsArticles.map((article, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "url": `https://www.sandhoff.org/news/${article.slug}`,
+      "name": article.title
+    }))
+  }
+});
+
 const News = () => {
   const featuredArticle = newsArticles.find((article) => article.featured);
   const regularArticles = newsArticles.filter((article) => !article.featured);
@@ -77,6 +103,7 @@ const News = () => {
         description="Neuigkeiten, Trends und Innovationen aus der professionellen Medientechnik. Berichte von ISE, InfoComm und aktuelle AV-Branchenthemen."
         keywords="Medientechnik News, AV Trends, ISE 2026, ProAV Innovationen, Konferenztechnik Neuheiten"
         canonical="/news"
+        structuredData={generateNewsListSchema()}
       />
 
       {/* Hero Section */}
