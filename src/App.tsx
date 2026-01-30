@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { TrailingSlashRedirect } from "@/components/TrailingSlashRedirect";
 import Index from "./pages/Index";
 import Leistungen from "./pages/Leistungen";
 import Loesungen from "./pages/Loesungen";
@@ -28,6 +29,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop />
+        <TrailingSlashRedirect />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/leistungen" element={<Leistungen />} />
