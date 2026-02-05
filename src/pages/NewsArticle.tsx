@@ -132,6 +132,54 @@ const articlesData: Record<string, ArticleData> = {
           </li>
         </ul>
 
+        <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">
+          Highlight: Barco ClickShare Hub
+        </h2>
+        <div className="aspect-video rounded-lg overflow-hidden mb-6">
+          <img 
+            src="/assets/news/barco-clickshare-hub-ise2026.jpg" 
+            alt="Barco ClickShare Hub auf der ISE 2026 - Modulares Video Conferencing Room System"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <p className="text-muted-foreground leading-relaxed">
+          Eines der Highlights auf der ISE 2026: Der neue <strong>Barco ClickShare Hub</strong> – ein modulares 
+          Video Conferencing Room System, das Zusammenarbeit auf ein neues Level hebt.
+        </p>
+        <ul className="space-y-3 text-muted-foreground">
+          <li className="flex items-start gap-3">
+            <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+            <span><strong>Modulares Raumsystem:</strong> Flexibel erweiterbar und an jede Raumgröße anpassbar</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+            <span><strong>4K Content Sharing:</strong> Kristallklare Inhalte für professionelle Präsentationen</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+            <span><strong>USB-C DisplayPort™ Button:</strong> Einfache Verbindung für sofortiges Teilen</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+            <span><strong>Best Button Experience:</strong> Bewährte ClickShare-Einfachheit für jeden Nutzer</span>
+          </li>
+        </ul>
+        
+        <div className="mt-6 flex flex-wrap gap-4">
+          <Button variant="outline" asChild>
+            <a href="/assets/docs/barco-clickshare-hub-brochure.pdf" download>
+              <Download className="mr-2 h-4 w-4" />
+              Produktbroschüre (PDF)
+            </a>
+          </Button>
+          <Button variant="outline" asChild>
+            <a href="https://www.barco.com/de/products/clickshare-conferencing-collaboration/room-systems-video-conferencing" target="_blank" rel="noopener noreferrer">
+              Barco ClickShare Website
+              <ExternalLink className="ml-2 h-4 w-4" />
+            </a>
+          </Button>
+        </div>
+
         <div className="mt-8 p-6 bg-card border rounded-lg">
           <h3 className="text-lg font-semibold text-foreground mb-2">
             Mehr zur ISE
