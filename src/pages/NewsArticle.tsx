@@ -143,27 +143,54 @@ const articlesData: Record<string, ArticleData> = {
           />
         </div>
         <p className="text-muted-foreground leading-relaxed">
-          Eines der Highlights auf der ISE 2026: Der neue <strong>Barco ClickShare Hub</strong> – ein modulares 
-          Video Conferencing Room System, das Zusammenarbeit auf ein neues Level hebt.
+          Eines der Highlights auf der ISE 2026: Der neue <strong>Barco ClickShare Hub</strong> – ein vollwertiges 
+          <strong>Microsoft Teams Room System auf Android-Basis</strong> mit integriertem ClickShare-System. 
+          Diese Kombination vereint das Beste aus beiden Welten: Die native Teams-Erfahrung mit der 
+          bewährten ClickShare-Einfachheit für kabelloses Präsentieren.
         </p>
+        
+        <h3 className="text-xl font-semibold text-foreground mt-6 mb-4">
+          ClickShare Hub Core vs. Hub Pro
+        </h3>
+        <div className="rounded-lg overflow-hidden mb-6 bg-muted">
+          <img 
+            src="/assets/news/barco-clickshare-hub-vergleich.png" 
+            alt="Barco ClickShare Hub Produktvergleich - Hub Core vs Hub Pro mit Dual-Screen Support"
+            className="w-full h-auto"
+          />
+        </div>
+        <p className="text-muted-foreground leading-relaxed mb-4">
+          Der <strong>ClickShare Hub Pro</strong> unterscheidet sich vom Core-Modell insbesondere durch die 
+          <strong>Dual-Screen-Unterstützung</strong> – ideal für größere Konferenzräume mit zwei Displays.
+        </p>
+        
         <ul className="space-y-3 text-muted-foreground">
           <li className="flex items-start gap-3">
             <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-            <span><strong>Modulares Raumsystem:</strong> Flexibel erweiterbar und an jede Raumgröße anpassbar</span>
+            <span><strong>Microsoft Teams Room on Android:</strong> Natives Teams-Erlebnis mit voller Meeting-Integration</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-            <span><strong>4K Content Sharing:</strong> Kristallklare Inhalte für professionelle Präsentationen</span>
+            <span><strong>Integriertes ClickShare:</strong> Kabelloses Präsentieren ohne zusätzliche Hardware</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-            <span><strong>USB-C DisplayPort™ Button:</strong> Einfache Verbindung für sofortiges Teilen</span>
+            <span><strong>Hub Pro mit Dual-Screen:</strong> Zwei Displays für erweiterte Präsentationen und Videokonferenzen</span>
           </li>
           <li className="flex items-start gap-3">
             <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
-            <span><strong>Best Button Experience:</strong> Bewährte ClickShare-Einfachheit für jeden Nutzer</span>
+            <span><strong>Next-Gen USB-C Button:</strong> Einfache Verbindung für sofortiges, kabelloses Teilen</span>
           </li>
         </ul>
+        
+        <div className="mt-6 p-4 bg-primary/10 border border-primary/20 rounded-lg">
+          <p className="text-foreground font-medium mb-2">🚀 Kommendes Update</p>
+          <p className="text-muted-foreground text-sm">
+            Ein Software-Update soll <strong>vollständiges Bring Your Own Device (BYOD)</strong> ermöglichen – 
+            mit bidirektionalem ClickShare, wie bei der CX-Serie. Damit wird der Hub zum absoluten Top-Produkt 
+            für hybride Zusammenarbeit.
+          </p>
+        </div>
         
         <div className="mt-6 flex flex-wrap gap-4">
           <Button variant="outline" asChild>
