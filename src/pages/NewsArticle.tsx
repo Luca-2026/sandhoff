@@ -207,6 +207,88 @@ const articlesData: Record<string, ArticleData> = {
           </Button>
         </div>
 
+        <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">
+          Crestron CCC-120-T: Die neue UC Compute Engine
+        </h2>
+        <div className="grid md:grid-cols-2 gap-4 mb-6">
+          <div className="aspect-video rounded-lg overflow-hidden bg-muted">
+            <img 
+              src="/assets/news/crestron-ccc-120-t.png" 
+              alt="Crestron CCC-120-T UC Compute Engine für Microsoft Teams Rooms - Produktansicht"
+              className="w-full h-full object-contain"
+            />
+          </div>
+          <div className="aspect-video rounded-lg overflow-hidden bg-muted">
+            <img 
+              src="/assets/news/crestron-ccc-120-ise2026.jpg" 
+              alt="Crestron CCC-120-T auf der ISE 2026 Barcelona"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+        <p className="text-muted-foreground leading-relaxed mb-4">
+          Ein weiteres Highlight: Die neue <strong>Crestron CCC-120-T</strong> – eine extrem leistungsstarke 
+          UC Compute Engine für <strong>Microsoft Teams Rooms</strong>. Mit dem <strong>Intel Core Ultra 7 Prozessor</strong> 
+          ist sie bereit für KI-Funktionen und bietet optimale Leistung für Echtzeit-Meeting-Verbesserungen 
+          und intelligente Kollaborationstools.
+        </p>
+        
+        <ul className="space-y-3 text-muted-foreground mb-6">
+          <li className="flex items-start gap-3">
+            <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+            <span><strong>Intel Core Ultra 7:</strong> KI-ready Prozessor für intelligente Meeting-Funktionen</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+            <span><strong>Direkte Touchpanel-Anbindung:</strong> PoE+ Port für Crestron TS(W)-1080-UC Touchscreens</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+            <span><strong>Single oder Dual Display:</strong> Unterstützung für bis zu zwei Videoausgänge</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+            <span><strong>Enterprise-Sicherheit:</strong> Für große Unternehmen, Universitäten und Behörden geeignet</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+            <span><strong>XiO Cloud Management:</strong> Zentrale Verwaltung und Provisionierung tausender Geräte</span>
+          </li>
+        </ul>
+
+        <div className="p-4 bg-card border rounded-lg mb-6">
+          <p className="text-foreground font-medium mb-2">📱 Neue TSW-1080 Touchpanel-Serie</p>
+          <p className="text-muted-foreground text-sm">
+            Wir haben auch die neue <strong>Crestron TSW-1080 Serie</strong> live getestet – die Touchpanels 
+            lassen sich direkt per PoE+ an die CCC-120-T anschließen und bieten die native Microsoft Teams Rooms 
+            Benutzeroberfläche mit optionaler Raumsteuerung für Licht, Jalousien und Klimaanlage.
+          </p>
+        </div>
+
+        <div className="p-4 bg-primary/10 border border-primary/20 rounded-lg mb-6">
+          <p className="text-foreground font-medium mb-2">🚀 Coming Soon: BYOD Conferencing</p>
+          <p className="text-muted-foreground text-sm">
+            Neben der BYOD-Präsentation via HDMI wird bald auch <strong>vollständiges BYOD Conferencing</strong> verfügbar sein – 
+            Laptop per USB-C an das Touchpanel anschließen und die eigene Konferenzplattform nutzen, 
+            während Kameras, Mikrofone und Lautsprecher des Raums verwendet werden.
+          </p>
+        </div>
+        
+        <div className="flex flex-wrap gap-4">
+          <Button variant="outline" asChild>
+            <a href="/assets/docs/crestron-ccc-120-t-datenblatt.pdf" download>
+              <Download className="mr-2 h-4 w-4" />
+              Datenblatt (PDF)
+            </a>
+          </Button>
+          <Button variant="outline" asChild>
+            <a href="https://www.crestron.com/Products/Workspace-Solutions/Unified-Communications/Crestron-Flex-Tabletop-Conferencing-Systems/CCC-120-T" target="_blank" rel="noopener noreferrer">
+              Crestron Website
+              <ExternalLink className="ml-2 h-4 w-4" />
+            </a>
+          </Button>
+        </div>
+
         <div className="mt-8 p-6 bg-card border rounded-lg">
           <h3 className="text-lg font-semibold text-foreground mb-2">
             Mehr zur ISE
