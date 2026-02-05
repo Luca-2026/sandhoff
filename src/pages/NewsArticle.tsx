@@ -152,7 +152,7 @@ const articlesData: Record<string, ArticleData> = {
         <h3 className="text-xl font-semibold text-foreground mt-6 mb-4">
           ClickShare Hub Core vs. Hub Pro
         </h3>
-        <div className="rounded-lg overflow-hidden mb-6 bg-muted">
+        <div className="rounded-lg overflow-hidden mb-6 bg-muted max-w-sm">
           <img 
             src="/assets/news/barco-clickshare-hub-vergleich.png" 
             alt="Barco ClickShare Hub Produktvergleich - Hub Core vs Hub Pro mit Dual-Screen Support"
