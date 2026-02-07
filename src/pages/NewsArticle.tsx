@@ -91,23 +91,7 @@ const articlesData: Record<string, ArticleData> = {
         </p>
 
         <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">
-          Unsere Highlights – Coming Soon
-        </h2>
-        <Card className="border-dashed border-2 border-muted-foreground/30 bg-muted/30">
-          <CardContent className="p-8 text-center">
-            <Clock className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-            <h3 className="text-lg font-semibold text-foreground mb-2">
-              Inhalte werden in Kürze ergänzt
-            </h3>
-            <p className="text-muted-foreground">
-              Nach unserem Besuch auf der ISE 2026 werden wir hier ausführlich über die 
-              wichtigsten Neuheiten, Trends und unsere persönlichen Eindrücke berichten.
-            </p>
-          </CardContent>
-        </Card>
-
-        <h2 className="text-2xl font-bold text-foreground mt-8 mb-4">
-          Was Sie erwarten können
+          Unsere Highlights von der ISE 2026
         </h2>
         <ul className="space-y-3 text-muted-foreground">
           <li className="flex items-start gap-3">
@@ -284,6 +268,94 @@ const articlesData: Record<string, ArticleData> = {
           <Button variant="outline" asChild>
             <a href="https://www.crestron.com/Products/Workspace-Solutions/Unified-Communications/Crestron-Flex-Tabletop-Conferencing-Systems/CCC-120-T" target="_blank" rel="noopener noreferrer">
               Crestron Website
+              <ExternalLink className="ml-2 h-4 w-4" />
+            </a>
+          </Button>
+        </div>
+
+        <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">
+          PureLink FlexInstall ProAV Kabel
+        </h2>
+        <div className="aspect-video rounded-lg overflow-hidden mb-6">
+          <img 
+            src="/assets/news/purelink-flexinstall-proav-ise2026.jpg" 
+            alt="PureLink FlexInstall ProAV Kabel auf der ISE 2026 - HDMI, USB-A, USB-B, USB-C und CAT.6A"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <p className="text-muted-foreground leading-relaxed mb-4">
+          PureLink präsentiert mit der <strong>FlexInstall ProAV</strong> Serie eine neue Generation 
+          professioneller AV-Kabel, die speziell für Installateure entwickelt wurden. Die Kabel überzeugen 
+          durch ein <strong>superflexibles, schlankes Kabeldesign</strong> mit kompakten Steckern und 
+          farbkodierten, abnehmbaren Knickschutzhülsen.
+        </p>
+        
+        <ul className="space-y-3 text-muted-foreground mb-6">
+          <li className="flex items-start gap-3">
+            <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+            <span><strong>HDMI 2.1 8K:</strong> Zukunftssicher für höchste Auflösungen</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+            <span><strong>USB-C (USB4 Gen2, 20 Gbps):</strong> Schnelle Datenübertragung und Videoübermittlung</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+            <span><strong>USB-A & USB-B (USB 3.2 Gen2):</strong> Für Peripheriegeräte und Konferenztechnik</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+            <span><strong>CAT.6A S/FTP:</strong> Geschirmte Netzwerkkabel für zuverlässige Signalübertragung</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+            <span><strong>Funktions- & Längenkodierung:</strong> Einfache Identifikation bei der Installation</span>
+          </li>
+        </ul>
+
+        <h2 className="text-2xl font-bold text-foreground mt-12 mb-4">
+          PureLink Unified Control Touch Panels
+        </h2>
+        <div className="aspect-video rounded-lg overflow-hidden mb-6">
+          <img 
+            src="/assets/news/purelink-control-displays-ise2026.jpg" 
+            alt="PureLink Unified Control Touch Panels in 4 bis 10 Zoll auf der ISE 2026"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <p className="text-muted-foreground leading-relaxed mb-4">
+          Ebenfalls neu bei PureLink: Die <strong>Unified Control Touch Panels</strong> – eine kostenoptimierte 
+          Steuerungslösung in Größen von <strong>4 bis 10 Zoll</strong>. Die Panels eignen sich ideal für 
+          einfache Steuerungsszenarien in Konferenzräumen, Klassenzimmern und Büros.
+        </p>
+        
+        <ul className="space-y-3 text-muted-foreground mb-6">
+          <li className="flex items-start gap-3">
+            <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+            <span><strong>4" bis 10" Displays:</strong> Flexible Größen für jede Raumanforderung</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+            <span><strong>PoE oder DC:</strong> Stromversorgung über Netzwerk oder externes Netzteil</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+            <span><strong>Intuitive Steuerung:</strong> Displays, Quellenwahl, Raumsteuerung auf einen Touch</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+            <span><strong>Integrierte Sensorik:</strong> Licht, Präsenz, Temperatur und Luftfeuchtigkeit</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></span>
+            <span><strong>Remote-Management:</strong> Updates, Verwaltung und GUI-Anpassung aus der Ferne</span>
+          </li>
+        </ul>
+        
+        <div className="flex flex-wrap gap-4">
+          <Button variant="outline" asChild>
+            <a href="https://www.purelink.de" target="_blank" rel="noopener noreferrer">
+              PureLink Website
               <ExternalLink className="ml-2 h-4 w-4" />
             </a>
           </Button>
